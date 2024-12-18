@@ -15,6 +15,7 @@
 
 <div class="md:hidden absolute w-full select-none drop-shadow-2xl" transition:slide>
     <menu>
+        <a onclick={closeMenu} href="/prior-jams">Prior Jams</a>
         <a onclick={closeMenu} href="/#about">About</a>
         <a onclick={closeMenu} href="/#schedule">Schedule</a>
         <a onclick={closeMenu} href="/#rules">Rules</a>

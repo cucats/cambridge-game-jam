@@ -17,6 +17,7 @@
             <nav
                 class="max-md:hidden flex items-center gap-6 text-xl font-semibold transition-colors"
             >
+                <a class="hover:text-emerald-600" href="/prior-jams">Prior Jams</a>
                 <a class="hover:text-emerald-600" href="/#about">About</a>
                 <a class="hover:text-emerald-600" href="/#schedule">Schedule</a>
                 <a class="hover:text-emerald-600" href="/#rules">Rules</a>
