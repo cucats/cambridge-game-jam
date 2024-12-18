@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Privacy Policy &bull; Cam Hack 2024</title>
+    <title>Privacy Policy &bull; Cam Hack 2025</title>
 </svelte:head>
 
 <section>

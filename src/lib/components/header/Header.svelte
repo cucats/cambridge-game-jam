@@ -10,7 +10,7 @@
         <a href="/" class="select-none">
             <div class="flex items-center">
                 <img class="h-[60px] ml-4" src="/cam-hack-logo-text.png" alt="Cam Hack Logo" />
-                <span class="ml-4 text-xl font-bold">Cam Hack 2024</span>
+                <span class="ml-4 text-xl font-bold">Cam Hack 2025</span>
             </div>
         </a>
         <div class="px-4">
