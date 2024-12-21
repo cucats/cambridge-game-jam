@@ -10,7 +10,7 @@
         },
         {
             title: "Cam Game Jam 2023",
-            url: "https://en.wikipedia.org/", // TODO: change this to the URL for the prior jam history page for this game jam
+            url: "/prior-jams/2023", // TODO: change this to the URL for the prior jam history page for this game jam
             startDate: "2nd November 2023",
             endDate: "3rd November 2023",
         },
