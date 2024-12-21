@@ -15,6 +15,6 @@
     {@render children()}
 </main>
 
-<footer class="p-8 theme-bg-gradient">
+<footer class="p-8 bg-gradient-to-br from-rose-400 to-red-300">
     <Footer />
 </footer>

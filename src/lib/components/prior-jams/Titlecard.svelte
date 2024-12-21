@@ -3,7 +3,7 @@
 </script>
 
 <a href={url}>
-    <div class="theme-bg-gradient rounded-2xl p-4">
+    <div class="bg-gradient-to-br from-rose-400 to-red-300 hover:from-rose-500 hover:to-red-400 rounded-2xl p-4">
         <h2>{title}</h2>
         <p>{startDate}&nbsp;&ndash;&nbsp;{endDate}</p>
     </div>
@@ -12,8 +12,5 @@
 <style>
     div {
         transition: 200ms;
-    }
-    div:hover {
-        background-image: linear-gradient(120deg, #80d68c 0%, #77ceb1 100%);
     }
 </style>

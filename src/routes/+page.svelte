@@ -12,7 +12,7 @@
     <title>Cam Hack 2025</title>
 </svelte:head>
 
-<section class="sm:p-8 theme-bg-gradient">
+<section class="sm:p-8 bg-gradient-to-br from-rose-400 to-red-300">
     <Hero />
 </section>
 

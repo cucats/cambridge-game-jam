@@ -10,14 +10,14 @@
         <a
             target="_blank"
             href="/discord"
-            class="px-6 py-4 rounded-2xl select-none transition-all text-green-900 bg-emerald-100/80 hover:bg-emerald-100 hover:scale-105"
+            class="px-6 py-4 rounded-2xl select-none transition-all text-red-900 bg-red-100/80 hover:bg-red-100 hover:scale-105"
         >
             Join the Discord!
         </a>
         <a
             target="_blank"
             href="/signup"
-            class="px-6 py-4 rounded-2xl select-none transition-all text-green-900 bg-emerald-100/80 hover:bg-emerald-100 hover:scale-105"
+            class="px-6 py-4 rounded-2xl select-none transition-all text-red-900 bg-red-100/80 hover:bg-red-100 hover:scale-105"
         >
             Sign up here!
         </a>

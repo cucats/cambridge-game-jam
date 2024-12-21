@@ -15,7 +15,7 @@
 
 <style lang="postcss">
     .bar {
-        @apply my-1 w-7 h-1 bg-slate-700 rounded-full transition-all;
+        @apply my-1 w-7 h-1 bg-zinc-700 rounded-full transition-all;
     }
 
     .expanded-bar-1 {
