@@ -52,8 +52,8 @@
         </li>
         <li>
             Submissions will be made to <a
-                href="https://cam-hack-2025.devpost.com"
-                class="theme-hyperlink">Devpost</a
+                href="/"
+                class="theme-hyperlink">itch.io</a
             >.
         </li>
     </ul>

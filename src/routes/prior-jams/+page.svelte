@@ -1,5 +1,5 @@
 <script>
-    import Titlecard from "../../lib/components/prior-jams/Titlecard.svelte";
+    import Titlecard from "$lib/components/prior-jams/Titlecard.svelte";
 
     let jams = [
         {
@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-    <title>Prior Jams &bull; Cam Hack 2025</title>
+    <title>Prior Jams &bull; Cambridge Game Jam</title>
 </svelte:head>
 
 <div id="prior-jam-outer" class="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
