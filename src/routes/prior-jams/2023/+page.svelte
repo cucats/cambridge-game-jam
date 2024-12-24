@@ -1,11 +1,12 @@
 <script>
     import { onMount } from "svelte";
 
-    let currentIndex = 0;
+    let currentIndex = $state(0);
+
     const images = [
         {
             src: "/prior-jams/2023/inferno_rising.png",
-            alt: "Image 1",
+            alt: "Inferno Rising",
             link: "https://firedemon111.itch.io/inferno-rising",
             title: "Inferno Rising",
             prize: "Popular Vote",
@@ -55,8 +56,9 @@
         currentIndex = (currentIndex - 1 + images.length) % images.length;
     };
 
-    let mouseX = 0;
-    let mouseY = 0;
+    let mouseX = $state(0);
+    let mouseY = $state(0);
+
     const handleMouseMove = (event) => {
         const { clientX, clientY, view } = event;
         const width = view.innerWidth;
@@ -96,7 +98,7 @@
     </div>
 </div>
 
-<div class="relative w-fullmx-auto overflow-hidden">
+<div class="relative mx-auto overflow-hidden">
     <!-- Images -->
     <div
         class="flex transition-transform duration-500"
@@ -141,13 +143,13 @@
     <!-- Navigation Buttons -->
     <button
         class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-        on:click={prevSlide}
+        onclick={prevSlide}
     >
         &#9664;
     </button>
     <button
         class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-        on:click={nextSlide}
+        onclick={nextSlide}
     >
         &#9654;
     </button>
@@ -159,7 +161,7 @@
                 class="w-3 h-3 rounded-full cursor-pointer shadow-lg"
                 class:!bg-white={index === currentIndex}
                 class:!bg-gray-400={index !== currentIndex}
-                on:click={() => (currentIndex = index)}
+                onclick={() => (currentIndex = index)}
                 aria-label="carousel-pip"
             ></button>
         {/each}
