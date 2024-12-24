@@ -97,7 +97,6 @@
     </div>
 </div>
 
-
 <div class="relative w-fullmx-auto overflow-hidden">
     <!-- Images -->
     <div
@@ -110,17 +109,22 @@
                     {src}
                     {alt}
                     class="w-full h-96 object-cover blur"
-                    style="transform: translate3d({-mouseX*0.5}px, {-mouseY*0.5}px, 0); transition: transform 0.1s ease-out;"
+                    style="transform: translate3d({-mouseX * 0.5}px, {-mouseY *
+                        0.5}px, 0); transition: transform 0.1s ease-out;"
                 />
                 <img
                     {src}
                     {alt}
                     class="w-full h-96 object-contain absolute top-0 left-0 scale-125"
-                    style="transform: translate3d({-mouseX}px, {-mouseY}px, 0) scale(1.25); transition: transform 0.1s ease-out;"
+                    style="transform: translate3d({-mouseX}px, {-mouseY}px, 0) scale(1.25); transition: transform 0.2s 0.1s ease-out;{index ==
+                    currentIndex
+                        ? 'transform: scale(1);'
+                        : 'transform: scale(0.5);'}"
                 />
                 <div
                     class="text-black blur-sm text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                    style="transform: translate3d(calc({-mouseX*0.5}px - 50%), calc({-mouseY*0.5}px - 50%), 0); transition: transform 0.1s ease-out;"
+                    style="transform: translate3d(calc({-mouseX * 0.5}px - 50%), calc({-mouseY *
+                        0.5}px - 50%), 0); transition: transform 0.1s ease-out;"
                 >
                     <h1>{title}</h1>
                     <h2>{prize}</h2>
