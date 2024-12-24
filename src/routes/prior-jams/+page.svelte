@@ -21,8 +21,10 @@
     <title>Prior Jams &bull; Cambridge Game Jam</title>
 </svelte:head>
 
-<div id="prior-jam-outer" class="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    {#each jams as jam (jam.title)}
-        <Titlecard {...jam} />
-    {/each}
+<div class="max-w-7xl mx-auto">
+    <div class="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {#each jams as jam (jam.title)}
+            <Titlecard {...jam} />
+        {/each}
+    </div>
 </div>

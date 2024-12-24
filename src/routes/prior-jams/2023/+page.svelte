@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import Hero from "../../../lib/components/Hero.svelte";
 
     let currentIndex = 0;
     const images = [
@@ -80,7 +79,7 @@
     <title>Cambridge Game Jam 2023</title>
 </svelte:head>
 
-<div class="w-full bg-gradient-to-br from-rose-400 to-red-300">
+<div class="bg-gradient-to-br from-rose-400 to-red-300">
     <div class="max-w-7xl pt-6 pb-2 mx-auto max-sm:text-center">
         <img
             src="/prior-jams/2023/logo.png"
