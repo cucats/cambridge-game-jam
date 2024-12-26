@@ -1,6 +1,7 @@
 <script>
-    import Gallery from "../../../lib/components/prior-jams/Gallery.svelte";
-    let imageUrls = [
+    import Gallery from "$lib/components/prior-jams/Gallery.svelte";
+
+    const imageUrls = [
         "https://github.gallerycdn.vsassets.io/extensions/github/copilot/1.254.1278/1734970099046/Microsoft.VisualStudio.Services.Icons.Default",
         "https://github.com/microsoft/vscode-copilot-release/blob/main/images/readme-gif.gif?raw=true",
         "https://code.visualstudio.com/assets/docs/copilot/inline-suggestions/js-suggest.png",

@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-    <title>Cam Hack 2025</title>
+    <title>Cambridge Game Jam</title>
 </svelte:head>
 
 <section class="sm:p-8 bg-gradient-to-br from-rose-400 to-red-300">
@@ -24,7 +24,7 @@
     <div class="max-w-7xl mx-auto">
         <a
             target="_blank"
-            href="https://cam-hack-2025.devpost.com/project-gallery"
+            href="/"
             class="text-violet-700 hover:text-violet-800 text-center"
         >
             <img

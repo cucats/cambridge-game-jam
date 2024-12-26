@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Sign up &bull; Cam Hack 2025</title>
+    <title>Sign up &bull; Cambridge Game Jam</title>
 </svelte:head>
 
 <section>

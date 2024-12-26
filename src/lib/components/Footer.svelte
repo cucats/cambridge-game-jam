@@ -9,7 +9,7 @@
     </div>
     <div>
         <p class="text-center">
-            Copyright &copy; Cam Hack 2025.<br />
+            Copyright &copy; Cambridge Game Jam 2023&ndash;2025.<br />
             Art by Gwen Sellers
         </p>
     </div>

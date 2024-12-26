@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Privacy Policy &bull; Cam Hack 2025</title>
+    <title>Privacy Policy &bull; Cambridge Game Jam</title>
 </svelte:head>
 
 <section>
@@ -11,7 +11,7 @@
             </em>
         </p>
         <p>
-            This Privacy Policy explains how Cam Hack collects and uses your personal information
+            This Privacy Policy explains how Cambridge Game Jam collects and uses your personal information
             when you participate in our hackathon.
         </p>
         <h3>1. Information we collect</h3>

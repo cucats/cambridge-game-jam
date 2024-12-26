@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Terms of Service &bull; Cam Hack 2025</title>
+    <title>Terms of Service &bull; Cambridge Game Jam</title>
 </svelte:head>
 
 <section>
@@ -24,7 +24,7 @@
         </p>
         <h3>3. Submissions</h3>
         <p>
-            By submitting your code and project, you grant Cam Hack a non-exclusive, royalty-free
+            By submitting your code and project, you grant Cambridge Game Jam a non-exclusive, royalty-free
             license to use, reproduce, modify, and publicly display your submission for:
         </p>
         <ul class="pl-8 list-disc">
