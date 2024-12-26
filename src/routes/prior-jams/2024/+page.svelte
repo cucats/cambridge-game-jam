@@ -1,17 +1,54 @@
 <script>
-    import Gallery from "$lib/components/prior-jams/Gallery.svelte";
+    import PriorJamPage from "$lib/components/prior-jams/PriorJamPage.svelte";
+    const title = "Cambridge Game Jam 2024";
+    const duration = "9th - 11th February";
+    const submissions = 23;
+    const theme = "Refleciton";
 
-    const imageUrls = [
-        "https://github.gallerycdn.vsassets.io/extensions/github/copilot/1.254.1278/1734970099046/Microsoft.VisualStudio.Services.Icons.Default",
-        "https://github.com/microsoft/vscode-copilot-release/blob/main/images/readme-gif.gif?raw=true",
-        "https://code.visualstudio.com/assets/docs/copilot/inline-suggestions/js-suggest.png",
-        "https://code.visualstudio.com/assets/docs/copilot/copilot-chat/copilot-view.png",
-        "https://code.visualstudio.com/assets/docs/copilot/copilot-chat/inline-chat-question-example.png",
-        "https://github.com/microsoft/vscode-copilot-release/blob/main/images/participants-workspace.gif?raw=true",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.m2poQAuK0hsDRyNTk3KiawHaLD%26pid%3DApi&f=1&ipt=5f24d59d64874bda974a4cac6a4a6975b5b0c9084508e845031e3d1c48fd5e2f&ipo=images",
-        "https://github.com/microsoft/vscode-copilot-release/blob/main/images/participants-terminal.gif?raw=true",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Fq08S4boDR5zLwHjN7aN4gHaKC%26pid%3DApi&f=1&ipt=24222aa81c32cf98448abdc40bfb2bb08b8ff692994caf06ab41759d79b536f8&ipo=images",
+    const images = [
+        {
+            src: "/prior-jams/2024/blight.png",
+            alt: "Blight",
+            link: "https://hex-26.itch.io/blight",
+            title: "Blight",
+            prize: "Most Popular and Best Gameplay",
+        },
+        {
+            src: "/prior-jams/2024/reflect-upon-your-actions.png",
+            alt: "Reflect Upon Your Actions",
+            link: "https://dylanmoss.itch.io/reflect-upon-you-actions",
+            title: "Reflect Upon Your Actions",
+            prize: "Most Popular and Most Original",
+        },
+        {
+            src: "/prior-jams/2024/reflected.png",
+            alt: "Reflected",
+            link: "https://ekorrette.itch.io/reflected",
+            title: "Reflected",
+            prize: "Theme Winner",
+        },
+        {
+            src: "/prior-jams/2024/asymmetry.png",
+            alt: "Asymmetry",
+            link: "https://alex-davies.itch.io/asymmetry",
+            title: "Asymmetry",
+            prize: "Best Gameplay",
+        },
+        {
+            src: "/prior-jams/2024/coulda-woulda-buddha.png",
+            alt: "Coulda Woulda Buddha",
+            link: "https://greenwood672.itch.io/coulda-woulda-buddha",
+            title: "Coulda Woulda Buddha",
+            prize: "Best Presentation",
+        },
+        {
+            src: "/prior-jams/2024/all-submissions.png",
+            alt: "All Submissions",
+            link: "https://itch.io/jam/camgamjam24",
+            title: "All Submissions",
+            prize: "",
+        },
     ];
 </script>
 
-<Gallery {imageUrls} />
+<PriorJamPage {images} {title} {duration} {submissions} {theme} />

@@ -4,15 +4,15 @@
     const jams = [
         {
             title: "Cam Game Jam 2024",
-            url: "https://camgamejam.com/", // TODO: change this to the URL for the prior jam history page for this game jam
-            startDate: "2nd November 2024",
-            endDate: "3rd November 2024",
+            url: "/prior-jams/2024",
+            startDate: "9th February",
+            endDate: "11th February",
         },
         {
             title: "Cam Game Jam 2023",
-            url: "/prior-jams/2023", // TODO: change this to the URL for the prior jam history page for this game jam
-            startDate: "2nd November 2023",
-            endDate: "3rd November 2023",
+            url: "/prior-jams/2023",
+            startDate: "10th February",
+            endDate: "12th February",
         },
     ];
 </script>

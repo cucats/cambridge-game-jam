@@ -2,22 +2,19 @@
     import { onMount } from "svelte";
 
     let currentIndex = $state(0);
-    const { images, title, date, submissions, theme } = $props();
+    const { images, title, duration, submissions, theme } = $props();
 
     const nextSlide = () => {
-        console.log("next slide");
-        console.log(currentIndex);
         currentIndex = (currentIndex + 1) % images.length;
-        console.log(currentIndex);
     };
 
     const prevSlide = () => {
-        console.log("previous slide");
         currentIndex = (currentIndex - 1 + images.length) % images.length;
     };
 
     let mouseX = $state(0);
     let mouseY = $state(0);
+
     const handleMouseMove = (event) => {
         const { clientX, clientY, view } = event;
         const width = view.innerWidth;
@@ -40,7 +37,7 @@
     <title>{title}</title>
 </svelte:head>
 
-<div class="w-full bg-gradient-to-br from-rose-400 to-red-300">
+<div class="bg-gradient-to-br from-rose-400 to-red-300">
     <div class="max-w-7xl pt-6 pb-2 mx-auto max-sm:text-center">
         <img
             src="/prior-jams/2023/logo.png"
@@ -48,7 +45,7 @@
             class="mx-auto max-md:mb-4 sm:mr-8 size-60 sm:size-72 sm:float-left md:size-80"
         />
         <h1 class="sm:pt-12 sm:text-5xl">{title}</h1>
-        <h3 class="sm:text-3xl">{date}</h3>
+        <h3 class="sm:text-3xl">{duration}</h3>
         <div class="mb-4 flex flex-wrap max-sm:justify-center gap-4">
             <h1>{theme}</h1>
         </div>
@@ -59,7 +56,7 @@
     </div>
 </div>
 
-<div class="relative w-fullmx-auto overflow-hidden">
+<div class="relative mx-auto overflow-hidden">
     <!-- Images -->
     <div
         class="flex transition-transform duration-500"
@@ -104,13 +101,13 @@
     <!-- Navigation Buttons -->
     <button
         class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-        on:click={prevSlide}
+        onclick={prevSlide}
     >
         &#9664;
     </button>
     <button
         class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-        on:click={nextSlide}
+        onclick={nextSlide}
     >
         &#9654;
     </button>
@@ -122,7 +119,7 @@
                 class="w-3 h-3 rounded-full cursor-pointer shadow-lg"
                 class:!bg-white={index === currentIndex}
                 class:!bg-gray-400={index !== currentIndex}
-                on:click={() => (currentIndex = index)}
+                onclick={() => (currentIndex = index)}
                 aria-label="carousel-pip"
             ></button>
         {/each}
