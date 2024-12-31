@@ -9,7 +9,7 @@
     <div class="flex justify-between items-center h-[60px]">
         <a href="/" class="select-none">
             <div class="flex items-center">
-                <img class="h-[60px] ml-4" src="/cam-hack-logo-text.png" alt="Cambridge Game Jam Logo" />
+                <img class="h-[60px] ml-4" src="/gamejam25.png" alt="Cambridge Game Jam Logo" />
                 <span class="ml-4 text-xl font-bold">Cambridge Game Jam 2025</span>
             </div>
         </a>

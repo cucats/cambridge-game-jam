@@ -6,9 +6,9 @@
     <h2>FAQ</h2>
     <FAQuestion>
         {#snippet question()}
-            <span> What is a hackathon?</span>
+            <span> What is a game jam?</span>
         {/snippet}
-        A hackathon is an event where people collaborate to create new projects! It usually runs over
+        A game jam is an event where people collaborate to create new games! It usually runs over
         a weekend and is a great way to learn new skills, meet new people, and have fun!
     </FAQuestion>
     <FAQuestion>

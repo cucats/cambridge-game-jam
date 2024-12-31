@@ -1,14 +1,6 @@
 <div class="max-w-7xl mx-auto">
     <h3 class="text-center sm:text-3xl">Sponsored by</h3>
-    <grid class="mb-10 sm:mb-12 grid grid-cols-4 max-sm:grid-cols-2 text-center">
-        <a class="inline-block" target="_blank" href="https://www.joinef.com">
-            <span class="inline-block h-full align-middle"></span>
-            <img
-                class="inline-block align-middle h-auto w-2/5"
-                src="/entrepreneur-first-logo.png"
-                alt="Entrepreneur First"
-            />
-        </a>
+    <grid class="mb-10 sm:mb-12 grid grid-cols-3 max-sm:grid-cols-2 text-center">
         <a class="inline-block" target="_blank" href="https://www.hudsonrivertrading.com">
             <span class="inline-block h-full align-middle"></span>
             <img
