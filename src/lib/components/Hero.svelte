@@ -1,6 +1,6 @@
 <div class="max-w-7xl mx-auto max-sm:text-center">
     <img
-        src="/gamejam25.png"
+        src="/2025/logo.png"
         alt="Cambridge Game Jam Logo"
         class="mx-auto max-md:mb-4 sm:mr-8 size-60 sm:size-72 sm:float-left md:size-80"
     />

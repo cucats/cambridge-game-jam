@@ -7,7 +7,7 @@
         <h2>Terms of Service</h2>
         <p>
             <em>
-                Last Updated: <time datetime="2024-10-14">14 October 2024</time>
+                Last Updated: <time datetime="2025-01-08">8 January 2025</time>
             </em>
         </p>
         <h3>1. Acceptance of Terms</h3>

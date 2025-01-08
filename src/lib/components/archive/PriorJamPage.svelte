@@ -40,7 +40,7 @@
 <div class="bg-gradient-to-br from-rose-400 to-red-300">
     <div class="max-w-7xl pt-6 pb-2 mx-auto max-sm:text-center">
         <img
-            src="/prior-jams/2023/logo.png"
+            src="/2024/logo.png"
             alt="Cambridge Game Jam Logo"
             class="mx-auto max-md:mb-4 sm:mr-8 size-60 sm:size-72 sm:float-left md:size-80"
         />

@@ -1,16 +1,16 @@
 <script>
-    import Titlecard from "$lib/components/prior-jams/Titlecard.svelte";
+    import Titlecard from "$lib/components/archive/Titlecard.svelte";
 
     const jams = [
         {
             title: "Cam Game Jam 2024",
-            url: "/prior-jams/2024",
+            url: "/archive/2024",
             startDate: "9th February",
             endDate: "11th February",
         },
         {
             title: "Cam Game Jam 2023",
-            url: "/prior-jams/2023",
+            url: "/archive/2023",
             startDate: "10th February",
             endDate: "12th February",
         },
@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-    <title>Prior Jams &bull; Cambridge Game Jam</title>
+    <title>Archive &bull; Cambridge Game Jam</title>
 </svelte:head>
 
 <div class="max-w-7xl mx-auto">

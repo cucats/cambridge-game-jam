@@ -1,4 +1,4 @@
-# ~~Cam Hack 2024~~ Cambridge Game Jam 2025 Website
+# Cambridge Game Jam 2025 Website
 
 ## Running a development server
 

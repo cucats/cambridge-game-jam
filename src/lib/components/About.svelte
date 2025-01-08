@@ -5,6 +5,6 @@
         Over an action-packed weekend, students come together to design and build technology
         projects from the ground up. We welcome participants ranging from curious beginners to
         seasoned coders. Expect plenty of free stash, food, and mini-events throughout this
-        hackathon. Over £1000 worth of prizes are to be won!
+        game jam. Over £1000 worth of prizes are to be won!
     </p>
 </div>

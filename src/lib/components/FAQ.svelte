@@ -13,7 +13,7 @@
     </FAQuestion>
     <FAQuestion>
         {#snippet question()}
-            <span>What are the hackathon tracks?</span>
+            <span>What are the game jam tracks?</span>
         {/snippet}
         All projects submit to a main track, which aligns with the overall theme of the event (to be
         revealed on the day). Participants can optionally submit the same project to one or more secondary
@@ -55,7 +55,7 @@
             <span>How do I sign up?</span>
         {/snippet}
         Fill out the
-        <a target="_blank" href="/signup" class="theme-hyperlink">sign up form</a> by 23:59 24th October!
+        <a target="_blank" href="/signup" class="theme-hyperlink">sign up form</a> by 23:59 26th January!
     </FAQuestion>
     <FAQuestion>
         {#snippet question()}

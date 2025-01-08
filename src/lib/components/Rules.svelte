@@ -27,12 +27,12 @@
     <h3>Submission</h3>
     <ul class="pl-8 list-disc">
         <li>
-            All work on projects must be done at the hackathon. Using existing open source code is
+            All work on projects must be done at the game jam. Using existing open source code is
             allowed if credited, but the project should be substantially new.
         </li>
         <li>
             Working on a project and open sourcing it for the sole purpose of using the code in the
-            hackathon is against the spirit of the rules and is not allowed.
+            game jam is against the spirit of the rules and is not allowed.
         </li>
         <li>
             AI assistants (Copilot, ChatGPT, etc.) are allowed when writing code, but don't go
