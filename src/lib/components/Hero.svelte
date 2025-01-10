@@ -22,6 +22,6 @@
             Sign up here!
         </a>
     </div>
-    <p class="text-xl">What can you make in 48 hours?</p>
+    <p class="text-xl">Build a game in 48 hours!</p>
     <p class="clear-left"></p>
 </div>

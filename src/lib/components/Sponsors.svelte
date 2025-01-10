@@ -1,6 +1,14 @@
 <div class="max-w-7xl mx-auto">
     <h3 class="text-center sm:text-3xl">Sponsored by</h3>
-    <grid class="mb-10 sm:mb-12 grid grid-cols-3 max-sm:grid-cols-2 text-center">
+    <grid class="mb-10 sm:mb-12 grid grid-cols-4 max-sm:grid-cols-2 text-center">
+        <a class="inline-block" target="_blank" href="https://www.iconicgames.io">
+            <span class="inline-block h-full align-middle"></span>
+            <img
+                class="inline-block align-middle h-auto w-11/12"
+                src="/iconic-games-logo.png"
+                alt="Iconic Games"
+            />
+        </a>
         <a class="inline-block" target="_blank" href="https://www.hudsonrivertrading.com">
             <span class="inline-block h-full align-middle"></span>
             <img
@@ -40,11 +48,11 @@
         </div>
         <div class="mb-8 flex-1 inline-block">
             <h3 class="mb-2 sm:text-3xl">Collaborating with</h3>
-            <a target="_blank" href="https://www.cuai.org.uk">
+            <a target="_blank" href="https://www.iconicgames.io">
                 <span class="inline-block h-full align-middle"></span>
                 <img
                     class="inline-block align-middle h-auto w-2/5"
-                    src="/cuai-text-logo.png"
+                    src="/conjecture-logo.svg"
                     alt="Cambridge University AI Society"
                 />
             </a>

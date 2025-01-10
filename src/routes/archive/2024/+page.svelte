@@ -44,7 +44,7 @@
         {
             src: "/2024/all-submissions.png",
             alt: "All Submissions",
-            link: "https://itch.io/jam/camgamjam24",
+            link: "https://itch.io/jam/camgamejam2024",
             title: "All Submissions",
             prize: "",
         },
