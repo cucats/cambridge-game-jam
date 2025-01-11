@@ -48,7 +48,7 @@
         </div>
         <div class="mb-8 flex-1 inline-block">
             <h3 class="mb-2 sm:text-3xl">Collaborating with</h3>
-            <a target="_blank" href="https://www.instagram.com/cudevs">
+            <a target="_blank" href="https://discord.gg/eHSMkqC3JC">
                 <span class="inline-block h-full align-middle"></span>
                 <img
                     class="inline-block align-middle h-auto w-2/5 rounded-lg"
