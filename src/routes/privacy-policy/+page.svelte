@@ -7,12 +7,12 @@
         <h2>Privacy Policy</h2>
         <p>
             <em>
-                Last Updated: <time datetime="2025-01-08">8 January 2025</time>
+                Last Updated: <time datetime="2025-01-11">1 January 2025</time>
             </em>
         </p>
         <p>
-            This Privacy Policy explains how Cambridge Game Jam collects and uses your personal information
-            when you participate in our hackathon.
+            This Privacy Policy explains how CUCaTS collects and uses your personal information
+            when you participate in our events.
         </p>
         <h3>1. Information we collect</h3>
         <p>We collect personal information you provide during registration, such as:</p>

@@ -22,7 +22,7 @@
             <li>Religion or belief system</li>
         </ul>
         <p>
-            If you feel you are being harassed by someone else at the hackathon, please come talk to
+            If you feel you are being harassed by someone else at the event, please come talk to
             a member of the committee and we will handle the situation accordingly. Participants who
             break these rules may be disqualified at the discretion of the committee.
         </p>

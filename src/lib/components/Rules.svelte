@@ -16,7 +16,7 @@
             Please do not bring food into the Intel lab! All food must stay downstairs in the
             street. &#127829;
         </li>
-        <li>You must not bring or consume alcohol at the hackathon.</li>
+        <li>You must not bring or consume alcohol at the event.</li>
         <li>We don't recommend it, but you can stay overnight in the lab if you want. &#128564;</li>
         <li>
             All participants must follow our <a href="/code-of-conduct" class="theme-hyperlink"
