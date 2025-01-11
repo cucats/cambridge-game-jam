@@ -9,7 +9,7 @@
     </div>
     <div>
         <p class="text-center">
-            Copyright &copy; Cambridge University Computing and Technology Society 2025.<br />
+            &copy; Cambridge University Computing and Technology Society 2025.<br />
             Art by Gwen Sellers
         </p>
     </div>
