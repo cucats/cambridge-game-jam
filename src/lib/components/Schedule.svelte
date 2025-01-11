@@ -10,10 +10,9 @@
                 <li>
                     <strong>17:30</strong> Hacking begins!
                 </li>
-                <br>
-                <li>
-                    <h4>Saturday 8th February</h4>
-                </li>
+            </ul>
+            <h4>Saturday 8th February</h4>
+            <ul>
                 <li>
                     <strong>13:00</strong>
                     Lunch
