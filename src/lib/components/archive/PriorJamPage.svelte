@@ -49,7 +49,7 @@
         <div class="mb-4 flex flex-wrap max-sm:justify-center gap-4">
             <h1>{theme}</h1>
         </div>
-        <a class="text-xl underline" href="https://itch.io/jam/camgamejam"
+        <a class="text-xl underline" href="https://itch.io/jam/camgamejam2023"
             >{submissions} {submissions == 1 ? "Submission" : "Submissions"}</a
         >
         <p class="clear-left"></p>

@@ -50,8 +50,8 @@
         </ul>
         <p>
             To exercise these rights, contact us at <a
-                href="mailto:dpo@camhack.org"
-                class="theme-hyperlink">dpo@camhack.org</a
+                href="mailto:info@camgamejam.com"
+                class="theme-hyperlink">info@camgamejam.com</a
             >
         </p>
     </div>
