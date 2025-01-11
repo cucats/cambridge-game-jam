@@ -1,16 +1,12 @@
 <script>
-    import { navigating } from "$app/stores";
+    import { onNavigate } from "$app/navigation";
     import { slide } from "svelte/transition";
 
     let { expanded = $bindable(false) } = $props();
 
-    function closeMenu() {
-        expanded = false;
-    }
+    const closeMenu = () => (expanded = false);
 
-    $effect(() => {
-        if ($navigating) closeMenu();
-    });
+    onNavigate(closeMenu);
 </script>
 
 <div class="md:hidden absolute w-full select-none drop-shadow-2xl" transition:slide>
