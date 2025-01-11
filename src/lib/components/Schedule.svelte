@@ -2,7 +2,7 @@
     <h2>Schedule</h2>
     <div class="flex max-md:flex-col">
         <div class="flex-1">
-            <h4>Friday, November 7th</h4>
+            <h4>Friday 7th February</h4>
             <ul>
                 <li>
                     <strong>17:00</strong> Opening ceremony
@@ -12,7 +12,7 @@
                 </li>
                 <br>
                 <li>
-                    <h4>Saturday, November 8th</h4>
+                    <h4>Saturday 8th February</h4>
                 </li>
                 <li>
                     <strong>13:00</strong>
@@ -25,7 +25,7 @@
             </ul>
         </div>
         <div class="flex-1 mb-4">
-            <h4>Sunday, November 9th</h4>
+            <h4>Sunday 9th February</h4>
             <ul>
                 <li>
                     <strong>17:00</strong>
