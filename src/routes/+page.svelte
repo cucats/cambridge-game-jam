@@ -12,7 +12,7 @@
     <title>Cambridge Game Jam</title>
 </svelte:head>
 
-<section class="sm:p-8 bg-gradient-to-br from-rose-400 to-red-300">
+<section class="p-8 bg-gradient-to-br from-rose-400 to-red-300">
     <Hero />
 </section>
 
@@ -42,10 +42,10 @@
 
 <style>
     section:nth-child(odd) {
-        background-color: #fafafa;
+        @apply bg-rose-50/80;
     }
 
     section:nth-child(even) {
-        background-color: #ffffff;
+        @apply bg-white;
     }
 </style>

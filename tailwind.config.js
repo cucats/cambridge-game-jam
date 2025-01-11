@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                playpen: ["Playpen Sans", "sans-serif"],
+                ubuntu: ["Ubuntu mono", "monospace"],
             },
         },
     },
