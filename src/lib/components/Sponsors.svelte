@@ -51,8 +51,8 @@
             <a target="_blank" href="https://www.instagram.com/cudevs">
                 <span class="inline-block h-full align-middle"></span>
                 <img
-                    class="inline-block align-middle h-auto w-1/4 rounded-lg"
-                    src="/cu-devs-logo.jpg"
+                    class="inline-block align-middle h-auto w-2/5 rounded-lg"
+                    src="/cu-devs-logo.png"
                     alt="Cambridge University Game Dev Society"
                 />
             </a>
