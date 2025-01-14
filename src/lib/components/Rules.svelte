@@ -17,7 +17,7 @@
             street. &#127829;
         </li>
         <li>You must not bring or consume alcohol at the event.</li>
-        <li>We don't recommend it, but you can stay overnight in the lab if you want. &#128564;</li>
+        <li>Staying after hours is done so at your own risk and subject to Lab opening times!</li>
         <li>
             All participants must follow our <a href="/code-of-conduct" class="theme-hyperlink"
                 >Code of Conduct</a
