@@ -36,9 +36,9 @@
     <FAQ />
 </section>
 
-<!-- <section>
+<section id="organisers">
     <Organisers />
-</section> -->
+</section>
 
 <style>
     section:nth-child(odd) {
