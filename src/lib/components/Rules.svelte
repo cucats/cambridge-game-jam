@@ -53,8 +53,8 @@
         <li>Submissions must support Windows 10/11 or Web at minimum.</li>
         <li>Submissions must not require additional software to be installed in order to run.</li>
         <li>
-            You may submit compressed .zip/.rar/.7zip file if the submission is too big for itch.io
-            (itch.io has a 1GB limit).
+            You may submit a compressed .zip/.rar/.7zip file if the submission is too big for
+            itch.io (itch.io has a 1GB limit).
         </li>
         <li>
             Submissions will be made to <a

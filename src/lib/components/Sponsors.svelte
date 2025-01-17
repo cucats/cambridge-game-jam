@@ -56,8 +56,7 @@
                     alt="Cambridge University Game Dev Society"
                 />
             </a>
-            <!-- TODO: Need to add a link here! -->
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://uccps.soc.srcf.net/">
                 <span class="inline-block h-full align-middle"></span>
                 <img
                     class="inline-block align-middle h-auto w-2/5 rounded-lg"
