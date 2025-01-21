@@ -22,6 +22,6 @@
 
 <style lang="postcss">
     a {
-        @apply block px-8 py-4 text-gray-800 transition-colors bg-white active:bg-emerald-200;
+        @apply block px-8 py-4 text-gray-800 transition-colors bg-white active:bg-rose-200;
     }
 </style>
