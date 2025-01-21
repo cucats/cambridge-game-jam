@@ -10,9 +10,15 @@
                 <li>
                     <strong>17:30</strong> Hacking begins!
                 </li>
+                <li>
+                    <strong>19:00</strong> Dinner
+                </li>
             </ul>
             <h4>Saturday 8th February</h4>
             <ul>
+                <li>
+                    <strong>09:00&ndash;12:00</strong> Breakfast
+                </li>
                 <li>
                     <strong>13:00</strong>
                     Lunch
@@ -27,12 +33,16 @@
             <h4>Sunday 9th February</h4>
             <ul>
                 <li>
-                    <strong>17:00</strong>
-                    Hacking ends
+                    <strong>09:00&ndash;12:00</strong> Breakfast
                 </li>
                 <li>
-                    <strong>17:30</strong>
-                    Submission deadline + Dinner
+                    <strong>13:00</strong> Lunch
+                </li>
+                <li>
+                    <strong>17:00</strong> Hacking ends
+                </li>
+                <li>
+                    <strong>17:30</strong> Submission deadline + Dinner
                 </li>
                 <li>
                     <strong>18:30&ndash;20:30</strong> Game demos!
@@ -50,7 +60,6 @@
 
 <style lang="postcss">
     strong::after {
-        @apply font-normal;
         content: " •";
     }
 </style>

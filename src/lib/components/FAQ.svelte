@@ -65,23 +65,16 @@
     </FAQuestion>
     <FAQuestion>
         {#snippet question()}
-            <span>Will there be food?</span>
-        {/snippet}
-        We will provide meals, as well as lots of snacks throughout the event! Please let us know
-        if you have any dietary requirements in the sign up form.
-    </FAQuestion>
-    <FAQuestion>
-        {#snippet question()}
             <span>Can I submit to multiple tracks?</span>
         {/snippet}
         Yes, projects can be submitted to multiple tracks.
     </FAQuestion>
-    <!-- <FAQuestion>
+    <FAQuestion>
         {#snippet question()}
             <span>What can I win?</span>
         {/snippet}
-        We have over £1000 worth of prizes to be won, including four Nintendo switches!
-    </FAQuestion> -->
+        We have over £1500 worth of prizes to be won, including four Nintendo switches!
+    </FAQuestion>
     <FAQuestion>
         {#snippet question()}
             <span>You didn't answer my questions!</span>
