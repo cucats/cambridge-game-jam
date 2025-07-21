@@ -3,7 +3,9 @@
 </script>
 
 <a href={url}>
-    <div class="bg-gradient-to-br from-rose-400 to-red-300 hover:from-rose-500 hover:to-red-400 rounded-2xl p-4">
+    <div
+        class="bg-gradient-to-br from-rose-400 to-red-300 hover:from-rose-500 hover:to-red-400 rounded-2xl p-4"
+    >
         <h2>{title}</h2>
         <p>{startDate}&nbsp;&ndash;&nbsp;{endDate}</p>
     </div>

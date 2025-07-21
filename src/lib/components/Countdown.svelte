@@ -14,7 +14,9 @@
     });
 </script>
 
-<div class="max-w-96 mx-auto rounded-2xl bg-rose-100 border-2 border-red-400 shadow-md flex text-center font-ubuntu">
+<div
+    class="max-w-96 mx-auto rounded-2xl bg-rose-100 border-2 border-red-400 shadow-md flex text-center font-ubuntu"
+>
     <div class="w-24 py-2">
         <div class="text-3xl font-bold">
             {Math.floor(dt / 86400)

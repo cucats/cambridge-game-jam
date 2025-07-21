@@ -8,8 +8,8 @@
         {#snippet question()}
             <span> What is a game jam?</span>
         {/snippet}
-        A game jam is an event where people collaborate to create games from scratch! It usually runs over
-        a weekend and is a great way to learn new skills, meet new people, and have fun!
+        A game jam is an event where people collaborate to create games from scratch! It usually runs
+        over a weekend and is a great way to learn new skills, meet new people, and have fun!
     </FAQuestion>
     <FAQuestion>
         {#snippet question()}
@@ -82,7 +82,7 @@
         You can ask us anything in our
         <a target="_blank" href="/discord" class="theme-hyperlink">Discord server</a>! You can also
         email us at
-        <a href="mailto:info@camgamejam.com" class="theme-hyperlink">info@camgamejam.com</a>, or speak to
-        us in person at the event, where we will be happy to answer.
+        <a href="mailto:info@camgamejam.com" class="theme-hyperlink">info@camgamejam.com</a>, or
+        speak to us in person at the event, where we will be happy to answer.
     </FAQuestion>
 </div>

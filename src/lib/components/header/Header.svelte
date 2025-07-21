@@ -24,7 +24,8 @@
                 <a class="hover:text-red-600" href="/#faq">FAQ</a>
                 <a
                     class="px-4 py-2 bg-red-300 rounded-lg transition-transform hover:scale-105"
-                    href="/signup" target="_blank">Sign up!</a
+                    href="/signup"
+                    target="_blank">Sign up!</a
                 >
             </nav>
             <Hamburger bind:expanded />
