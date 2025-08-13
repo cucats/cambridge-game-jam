@@ -3,12 +3,12 @@
 ## Running a development server
 
 ```bash
-pnpm install
-pnpm run dev
+bun install
+bun run dev
 ```
 
 ## Building a production version
 
 ```bash
-pnpm run build
+bun run build
 ```
