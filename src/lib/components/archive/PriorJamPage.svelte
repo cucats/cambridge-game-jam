@@ -37,7 +37,7 @@
   <title>{title}</title>
 </svelte:head>
 
-<div class="bg-gradient-to-br from-rose-400 to-red-300">
+<div class="bg-linear-to-br from-rose-400 to-red-300">
   <div class="max-w-7xl pt-6 pb-2 mx-auto max-sm:text-center">
     <img
       src="/2024/logo.png"
@@ -63,11 +63,11 @@
     style="transform: translateX(-{currentIndex * 100}%)"
   >
     {#each images as { src, alt, link, title, prize }, index}
-      <a href={link} class="w-full flex-shrink-0 relative">
+      <a href={link} class="w-full shrink-0 relative">
         <img
           {src}
           {alt}
-          class="w-full h-96 object-cover blur"
+          class="w-full h-96 object-cover blur-sm"
           style="transform: translate3d({-mouseX * 0.5}px, {-mouseY *
             0.5}px, 0); transition: transform 0.1s ease-out;"
         />
@@ -81,7 +81,7 @@
             : 'transform: scale(0.5);'}"
         />
         <div
-          class="text-black blur-sm text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          class="text-black blur-xs text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           style="transform: translate3d(calc({-mouseX *
             0.5}px - 50%), calc({-mouseY *
             0.5}px - 50%), 0); transition: transform 0.1s ease-out;"
