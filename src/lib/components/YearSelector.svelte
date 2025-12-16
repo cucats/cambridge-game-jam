@@ -17,13 +17,13 @@
     {
       year: 2025,
       theme: "Synaesthesia",
-      submissionImage: "/2025/jam.png",
+      submissionImage: "/2025/Synthesia.png",
       accent: "#3C6E71",
     },
     {
       year: 2026,
       theme: "???",
-      submissionImage: "/2026/jam.png",
+      submissionImage: null,
       accent: "#8C5A8E",
       archiveLink: null,
     },
@@ -58,7 +58,9 @@
           on:click={() => setYear(yearData.year)}
         >
           <div class="panel-media" aria-hidden="true">
-            <img src={yearData.submissionImage} alt="" loading="lazy" />
+            {#if yearData.submissionImage}
+              <img src={yearData.submissionImage} alt="" loading="lazy" />
+            {/if}
             <div class="panel-overlay"></div>
           </div>
 
