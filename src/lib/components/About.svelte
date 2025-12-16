@@ -49,7 +49,6 @@
     font-weight: 700;
     margin-bottom: 2rem;
     color: #1a1a1a;
-    font-family: "Georgia", serif;
   }
 
   .about-text {
