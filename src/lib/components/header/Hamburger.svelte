@@ -14,6 +14,8 @@
 </button>
 
 <style lang="postcss">
+  @reference "../../../app.css";
+
   .bar {
     @apply my-1 w-7 h-1 bg-zinc-700 rounded-full transition-all;
   }

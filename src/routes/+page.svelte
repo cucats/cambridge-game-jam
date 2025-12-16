@@ -41,6 +41,8 @@
 </section>
 
 <style>
+  @reference "../app.css";
+
   section:nth-child(odd) {
     @apply bg-rose-50/80;
   }
