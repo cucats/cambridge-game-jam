@@ -1,4 +1,4 @@
-# Cambridge Game Jam 2025 Website
+# Cambridge Game Jam 2026 Website
 
 ## Running a development server
 

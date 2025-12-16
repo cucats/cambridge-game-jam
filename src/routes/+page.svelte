@@ -16,21 +16,21 @@
   <Hero />
 </section>
 
-<section>
+<!-- <section>
   <Sponsors />
-</section>
+</section> -->
 
 <section id="about">
   <About />
 </section>
-
+<!-- 
 <section id="schedule">
   <Schedule />
 </section>
 
 <section id="rules">
   <Rules />
-</section>
+</section> -->
 
 <section id="faq">
   <FAQ />
