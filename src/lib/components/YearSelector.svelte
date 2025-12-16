@@ -29,7 +29,7 @@
     },
   ];
 
-  let selectedYear = years[years.length - 1].year;
+  let selectedYear = years[0].year;
 
   const setYear = (year) => {
     selectedYear = year;
