@@ -11,22 +11,15 @@
 
 <ComingSoon />
 
-<section id="about">
+<section id="about" class="bg-white">
   <About />
 </section>
 
-<section id="organisers">
+<section id="organisers" class="bg-gray-50">
   <Organisers />
 </section>
 
 <style>
-  section#about {
-    @apply bg-white;
-  }
-
-  section#organisers {
-    @apply bg-gray-50;
-  }
 
   :global(body) {
     scroll-behavior: smooth;
