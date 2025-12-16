@@ -1,6 +1,12 @@
+<script>
+  import BackToMainButton from "$lib/components/BackToMainButton.svelte";
+</script>
+
 <svelte:head>
   <title>Code of Conduct &bull; The Cambridge Game Jam</title>
 </svelte:head>
+
+<BackToMainButton />
 
 <section>
   <div class="max-w-7xl mx-auto">
