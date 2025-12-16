@@ -77,7 +77,9 @@
             </div>
 
             {#if yearData.archiveLink}
-              <a class="panel-link" href={yearData.archiveLink}>Open archive</a>
+              <a class="panel-link" href={yearData.archiveLink}>
+                Open archive →
+              </a>
             {:else}
               <span class="panel-link placeholder" aria-hidden="true"
                 >Archive coming soon…</span
@@ -126,14 +128,6 @@
     font-size: clamp(2rem, 4vw, 2.75rem);
     margin-bottom: 0.75rem;
     color: #1a1a1a;
-  }
-
-  .intro {
-    max-width: 620px;
-    margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #4d4d4d;
   }
 
   .panels {
@@ -321,10 +315,12 @@
     }
 
     .panel {
+      flex: none;
       height: auto;
     }
 
     .panel.active {
+      flex: none;
       transform: none;
     }
 
