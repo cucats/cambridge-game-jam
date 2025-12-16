@@ -4,15 +4,15 @@
 
 <div class="about-container">
   <div class="about-content">
-    <h2 class="about-title">About Cambridge Game Jam</h2>
+    <h2 class="about-title">About The Cambridge Game Jam</h2>
 
     <div class="about-text">
       <p>
-        <strong>Now in its fourth year</strong>, Cambridge Game Jam is a 48 hour
-        game jam hosted by the Cambridge University Computing and Technology
-        Society. Over an action-packed weekend, you will have 48 hours to build
-        a game in teams or individually based around a theme (announced at the
-        beginning of the jam)!
+        <strong>Now in its fourth year</strong>, The Cambridge Game Jam is a 48
+        hour game jam hosted by the Cambridge University Computing and
+        Technology Society. Over an action-packed weekend, you will have 48
+        hours to build a game in teams or individually based around a theme
+        (announced at the beginning of the jam)!
       </p>
 
       <p>

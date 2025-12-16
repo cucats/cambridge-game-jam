@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Cambridge Game Jam - Coming Soon</title>
-  <meta name="description" content="Cambridge Game Jam 2026" />
+  <title>The Cambridge Game Jam 2026</title>
+  <meta name="description" content="The Cambridge Game Jam 2026" />
 </svelte:head>
 
 <ComingSoon />

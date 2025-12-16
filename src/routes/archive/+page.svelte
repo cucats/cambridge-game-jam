@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-  <title>Archive &bull; Cambridge Game Jam</title>
+  <title>Archive &bull; The Cambridge Game Jam</title>
 </svelte:head>
 
 <div class="max-w-7xl mx-auto">

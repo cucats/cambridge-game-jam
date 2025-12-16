@@ -9,7 +9,7 @@
   <div class="background-image">
     <img
       src="/2024/group-photo.jpg"
-      alt="Cambridge Game Jam Group Photo"
+      alt="The Cambridge Game Jam Group Photo"
       class="hero-photo"
       decoding="async"
     />
@@ -20,7 +20,7 @@
     <div class="logo-container">
       <img
         src="/2026/logo.png"
-        alt="Cambridge Game Jam 2026 Logo"
+        alt="The Cambridge Game Jam 2026 Logo"
         class="logo"
         decoding="async"
       />
@@ -28,7 +28,7 @@
 
     <h1 class="main-title">Coming Soon</h1>
 
-    <h2 class="subtitle">Cambridge Game Jam 2026</h2>
+    <h2 class="subtitle">The Cambridge Game Jam 2026</h2>
 
     <div class="description">
       <p class="lead-text">
