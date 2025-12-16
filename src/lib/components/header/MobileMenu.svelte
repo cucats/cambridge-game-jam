@@ -24,6 +24,8 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../../app.css";
+
   a {
     @apply block px-8 py-4 text-gray-800 transition-colors bg-white active:bg-rose-200;
   }
