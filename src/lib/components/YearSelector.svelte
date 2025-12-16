@@ -53,9 +53,12 @@
           role="tab"
           aria-selected={selectedYear === yearData.year}
           aria-controls={`panel-${yearData.year}`}
-          on:pointerenter={() => setYear(yearData.year)}
-          on:focus={() => setYear(yearData.year)}
-          on:click={() => setYear(yearData.year)}
+          aria-disabled={yearData.year === 2026}
+          on:pointerenter={() =>
+            yearData.year !== 2026 && setYear(yearData.year)}
+          on:focus={() => yearData.year !== 2026 && setYear(yearData.year)}
+          on:click={() => yearData.year !== 2026 && setYear(yearData.year)}
+          class:disabled={yearData.year === 2026}
         >
           <div class="panel-media" aria-hidden="true">
             {#if yearData.submissionImage}
@@ -75,6 +78,10 @@
 
             {#if yearData.archiveLink}
               <a class="panel-link" href={yearData.archiveLink}>Open archive</a>
+            {:else}
+              <span class="panel-link placeholder" aria-hidden="true"
+                >Archive coming soon…</span
+              >
             {/if}
           </div>
         </button>
@@ -86,21 +93,25 @@
 <style>
   .timeline {
     width: 100vw;
+    height: 100vh;
     margin-left: 50%;
     transform: translateX(-50%);
     background: #f5f3f0;
-    padding: 4rem 0 5rem;
+    padding: 0;
   }
 
   .timeline-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
   }
 
   .timeline-header {
     text-align: center;
-    margin-bottom: 3rem;
+    padding: 1.25rem 0;
   }
 
   .eyebrow {
@@ -127,28 +138,28 @@
 
   .panels {
     display: flex;
-    gap: 1.25rem;
-    min-height: 380px;
+    gap: 0;
+    min-height: 0;
+    height: 100%;
   }
 
   .panel {
     position: relative;
     flex: 1;
-    min-width: clamp(140px, 22vw, 240px);
+    min-width: 0;
     border: none;
     padding: 0;
-    border-radius: 24px;
+    border-radius: 0;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     align-items: stretch;
     justify-content: stretch;
     background: #0f172a;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+    box-shadow: none;
     transition:
       flex 0.5s ease,
-      box-shadow 0.5s ease,
-      transform 0.5s ease;
+      box-shadow 0.5s ease;
   }
 
   .panel:focus-visible {
@@ -157,9 +168,8 @@
   }
 
   .panel.active {
-    flex: 1.65;
-    transform: translateY(-6px);
-    box-shadow: 0 28px 45px rgba(15, 23, 42, 0.28);
+    flex: 2.2;
+    box-shadow: none;
   }
 
   .panel-media {
@@ -192,13 +202,10 @@
 
   .panel-body {
     position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
+    width: 100%;
     z-index: 1;
     margin-top: auto;
-    padding: 2.75rem 2rem 2.25rem;
+    padding: 2.25rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -217,6 +224,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
+    min-height: 2.4rem;
   }
 
   .panel-year {
@@ -238,6 +246,7 @@
     background: rgba(255, 255, 255, 0.18);
     font-size: 0.95rem;
     letter-spacing: 0.05em;
+    width: max-content;
   }
 
   .theme-label {
@@ -250,12 +259,15 @@
   .theme-value {
     font-weight: 600;
     font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
   }
 
   .panel-link {
     display: inline-flex;
     align-items: center;
-    width: fit-content;
+    width: max-content;
     font-size: 0.95rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -266,11 +278,26 @@
     transition:
       color 0.3s ease,
       border-color 0.3s ease;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
   }
 
   .panel-link:hover {
     color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .panel-link.placeholder {
+    opacity: 0.6;
+    border-color: rgba(255, 255, 255, 0.25);
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .panel.disabled,
+  .panel[aria-disabled="true"] {
+    cursor: default;
   }
 
   .panel.active .panel-body {
@@ -289,7 +316,7 @@
   @media (max-width: 1024px) {
     .panels {
       flex-direction: column;
-      gap: 1rem;
+      gap: 0;
       min-height: unset;
     }
 
@@ -302,6 +329,7 @@
     }
 
     .panel-body {
+      width: 100%;
       padding: 2rem;
       gap: 1.5rem;
     }
@@ -309,12 +337,39 @@
 
   @media (max-width: 640px) {
     .timeline-inner {
-      padding: 0 1.5rem;
+      padding: 0 0.75rem;
     }
 
     .panel-body {
-      padding: 1.75rem;
+      padding: 1.25rem 1rem 1.25rem;
       gap: 1.35rem;
+    }
+
+    /* Allow text to overrun on mobile without clipping */
+    .panel-theme {
+      max-width: 100%;
+      align-self: flex-start;
+      text-align: left;
+    }
+
+    .theme-value {
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap;
+    }
+
+    .panel-link {
+      width: fit-content;
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap;
+    }
+
+    .panel-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.75rem;
     }
   }
 </style>
