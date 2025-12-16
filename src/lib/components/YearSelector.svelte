@@ -82,7 +82,9 @@
               </a>
             {:else}
               <span class="panel-link placeholder" aria-hidden="true"
-                >Archive coming soon…</span
+                >{yearData.year === 2025
+                  ? "Archive coming soon…"
+                  : "\u00A0"}</span
               >
             {/if}
           </div>
@@ -94,17 +96,19 @@
 
 <style>
   .timeline {
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     height: 100vh;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
     background: #f5f3f0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   .timeline-inner {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: grid;
@@ -135,6 +139,9 @@
     gap: 0;
     min-height: 0;
     height: 100%;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   .panel {
@@ -308,10 +315,20 @@
   }
 
   @media (max-width: 1024px) {
+    .timeline {
+      height: auto;
+    }
+
+    .timeline-inner {
+      height: auto;
+      grid-template-rows: auto auto;
+    }
+
     .panels {
       flex-direction: column;
       gap: 0;
       min-height: unset;
+      height: auto;
     }
 
     .panel {
@@ -333,7 +350,7 @@
 
   @media (max-width: 640px) {
     .timeline-inner {
-      padding: 0 0.75rem;
+      padding: 0.5rem 0.75rem;
     }
 
     .panel-body {
