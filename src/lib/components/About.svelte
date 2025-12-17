@@ -49,6 +49,7 @@
     font-weight: 700;
     margin-bottom: 2rem;
     color: #1a1a1a;
+    animation: fade-in-up 0.8s ease-out both;
   }
 
   .about-text {
@@ -61,11 +62,38 @@
     line-height: 1.7;
     margin-bottom: 1.5rem;
     color: #444;
+    animation: fade-in-up 0.8s ease-out both;
+  }
+
+  .about-text p:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .about-text p:nth-child(2) {
+    animation-delay: 0.4s;
   }
 
   .about-text strong {
     color: #000;
     font-weight: 700;
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-title,
+    .about-text p {
+      animation: none !important;
+    }
   }
 
   @media (max-width: 768px) {
