@@ -43,23 +43,34 @@
       <h3 id="timeline-heading">View the archive</h3>
     </header>
 
-    <div class="panels" role="tablist">
+    <div class="panels" role="tablist" aria-labelledby="timeline-heading">
       {#each years as yearData (yearData.year)}
-        <button
-          type="button"
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div
           class="panel"
           class:active={selectedYear === yearData.year}
+          class:disabled={yearData.year === 2026}
           style="--accent: {yearData.accent}"
-          role="tab"
-          aria-selected={selectedYear === yearData.year}
-          aria-controls={`panel-${yearData.year}`}
-          aria-disabled={yearData.year === 2026}
+          role="none"
+          on:click={() => yearData.year !== 2026 && setYear(yearData.year)}
           on:pointerenter={() =>
             yearData.year !== 2026 && setYear(yearData.year)}
-          on:focus={() => yearData.year !== 2026 && setYear(yearData.year)}
-          on:click={() => yearData.year !== 2026 && setYear(yearData.year)}
-          class:disabled={yearData.year === 2026}
         >
+          <button
+            type="button"
+            class="panel-trigger"
+            id={`tab-${yearData.year}`}
+            role="tab"
+            aria-selected={selectedYear === yearData.year}
+            aria-controls={`panel-${yearData.year}`}
+            aria-disabled={yearData.year === 2026}
+            tabindex={yearData.year === 2026 ? -1 : 0}
+            on:focus={() => yearData.year !== 2026 && setYear(yearData.year)}
+          >
+            <span class="sr-only">Select {yearData.year}</span>
+          </button>
+
           <div class="panel-media" aria-hidden="true">
             {#if yearData.submissionImage}
               <img src={yearData.submissionImage} alt="" loading="lazy" />
@@ -67,7 +78,12 @@
             <div class="panel-overlay"></div>
           </div>
 
-          <div class="panel-body" id={`panel-${yearData.year}`} role="tabpanel">
+          <div
+            class="panel-body"
+            id={`panel-${yearData.year}`}
+            role="tabpanel"
+            aria-labelledby={`tab-${yearData.year}`}
+          >
             <div class="panel-meta">
               <span class="panel-year">{yearData.year}</span>
               <div class="panel-theme">
@@ -88,7 +104,7 @@
               >
             {/if}
           </div>
-        </button>
+        </div>
       {/each}
     </div>
   </div>
@@ -163,9 +179,22 @@
       box-shadow 0.5s ease;
   }
 
-  .panel:focus-visible {
+  .panel-trigger {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .panel-trigger:focus-visible {
     outline: 3px solid var(--accent);
-    outline-offset: 4px;
+    outline-offset: -3px;
   }
 
   .panel.active {
@@ -204,7 +233,8 @@
   .panel-body {
     position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+    pointer-events: none;
     margin-top: auto;
     padding: 2.25rem 2rem 2rem;
     display: flex;
@@ -218,6 +248,11 @@
       rgba(15, 23, 42, 0.75) 100%
     );
     align-items: flex-start;
+  }
+
+  .panel-body a,
+  .panel-body button {
+    pointer-events: auto;
   }
 
   .panel-meta {
