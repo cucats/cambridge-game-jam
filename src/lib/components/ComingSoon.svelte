@@ -119,7 +119,7 @@
     }
   }
 
-  @keyframes bounce {
+  /* @keyframes bounce {
     0%,
     20%,
     50%,
@@ -133,7 +133,7 @@
     60% {
       transform: translateX(-50%) translateY(-5px);
     }
-  }
+  } */
 
   /* Resp-container {
       width: 140px;
