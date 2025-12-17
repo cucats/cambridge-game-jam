@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import BackToMainButton from "$lib/components/BackToMainButton.svelte";
 
   let currentIndex = $state(0);
   const { images, title, duration, submissions, theme } = $props();
@@ -127,4 +128,6 @@
       ></button>
     {/each}
   </div>
+
+  <BackToMainButton />
 </div>

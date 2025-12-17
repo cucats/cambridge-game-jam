@@ -1,15 +1,11 @@
 <div class="max-w-7xl mx-auto">
   <h2>Organising Committee</h2>
   <ul class="pl-0 list-none sm:columns-2 md:columns-3 lg:columns-4">
-    <li>Kevin Bhupal</li>
-    <li>Brian Chen</li>
-    <li>Jeremy Chen</li>
-    <li>Alex Davies</li>
-    <li>Cameron Fox</li>
-    <li>Dylan Moss</li>
-    <li>Sam Shakeshaft</li>
-    <li>Affan Siddiqui</li>
-    <li>Bekalu Terefe-Zenebe</li>
-    <li>Xavier Yeo</li>
+    <li>James Leung</li>
+    <li>Uliana Ronska</li>
+    <li>Kotaro Yoshizawa</li>
+    <li>Jadon Mensah</li>
+    <li>Carol Bao</li>
+    <li>Sophie Guenroc</li>
   </ul>
 </div>

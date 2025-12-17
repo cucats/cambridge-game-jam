@@ -1,12 +1,18 @@
+<script>
+  import BackToMainButton from "$lib/components/BackToMainButton.svelte";
+</script>
+
 <svelte:head>
-  <title>Code of Conduct &bull; Cambridge Game Jam</title>
+  <title>Code of Conduct &bull; The Cambridge Game Jam</title>
 </svelte:head>
+
+<BackToMainButton />
 
 <section>
   <div class="max-w-7xl mx-auto">
     <h2>Code of Conduct</h2>
     <p>
-      Cambridge Game Jam is committed to providing a safe, inclusive, and
+      The Cambridge Game Jam is committed to providing a safe, inclusive, and
       welcoming experience for everyone. This code outlines our expectations for
       all participants and attendees.
     </p>

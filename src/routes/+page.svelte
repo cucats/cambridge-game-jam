@@ -1,53 +1,26 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
-  import Sponsors from "$lib/components/Sponsors.svelte";
+  import ComingSoon from "$lib/components/ComingSoon.svelte";
   import About from "$lib/components/About.svelte";
-  import Schedule from "$lib/components/Schedule.svelte";
-  import Rules from "$lib/components/Rules.svelte";
-  import FAQ from "$lib/components/FAQ.svelte";
   import Organisers from "$lib/components/Organisers.svelte";
 </script>
 
 <svelte:head>
-  <title>Cambridge Game Jam</title>
+  <title>The Cambridge Game Jam 2026</title>
+  <meta name="description" content="The Cambridge Game Jam 2026" />
 </svelte:head>
 
-<section class="p-8 bg-linear-to-br from-rose-400 to-red-300">
-  <Hero />
-</section>
+<ComingSoon />
 
-<section>
-  <Sponsors />
-</section>
-
-<section id="about">
+<section id="about" class="bg-white">
   <About />
 </section>
 
-<section id="schedule">
-  <Schedule />
-</section>
-
-<section id="rules">
-  <Rules />
-</section>
-
-<section id="faq">
-  <FAQ />
-</section>
-
-<section id="organisers">
+<section id="organisers" class="bg-gray-50">
   <Organisers />
 </section>
 
 <style>
-  @reference "../app.css";
-
-  section:nth-child(odd) {
-    @apply bg-rose-50/80;
-  }
-
-  section:nth-child(even) {
-    @apply bg-white;
+  :global(body) {
+    scroll-behavior: smooth;
   }
 </style>

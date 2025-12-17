@@ -1,5 +1,6 @@
 <script>
   import Titlecard from "$lib/components/archive/Titlecard.svelte";
+  import BackToMainButton from "$lib/components/BackToMainButton.svelte";
 
   const jams = [
     {
@@ -18,8 +19,10 @@
 </script>
 
 <svelte:head>
-  <title>Archive &bull; Cambridge Game Jam</title>
+  <title>Archive &bull; The Cambridge Game Jam</title>
 </svelte:head>
+
+<BackToMainButton />
 
 <div class="max-w-7xl mx-auto">
   <div class="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
