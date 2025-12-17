@@ -20,7 +20,6 @@
 </section>
 
 <style>
-
   :global(body) {
     scroll-behavior: smooth;
   }

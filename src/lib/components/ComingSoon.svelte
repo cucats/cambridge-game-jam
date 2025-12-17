@@ -1,11 +1,12 @@
 <script>
-  function scrollToAbout() {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  }
+  // Reserved for future interactivity (e.g. scroll buttons)
 </script>
 
 <!-- Compact, left-aligned hero section -->
-<section class="hero-container">
+<section
+  class="hero-container"
+  style="min-height: 400px; background-color: #ffffff; color: white; display: flex; justify-content: center;"
+>
   <div class="hero-inner">
     <div class="logo-column">
       <div class="logo-container">
@@ -14,6 +15,8 @@
           alt="The Cambridge Game Jam 2026 Logo"
           class="logo"
           decoding="async"
+          width="160"
+          height="160"
         />
       </div>
     </div>
@@ -29,6 +32,7 @@
   .hero-container {
     position: relative;
     width: 100%;
+    height: 400px;
     padding: 3rem 1.5rem;
     background-color: #05020d;
     background-image:
@@ -60,13 +64,16 @@
   }
 
   .logo-container {
-    animation: fade-in-down 1s ease-out;
+    width: 160px;
+    height: 160px;
+    animation: fade-in-down 1s ease-out both;
   }
 
   .logo {
     display: block;
-    width: clamp(96px, 14vw, 160px);
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     margin-inline: 0;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
   }
@@ -128,14 +135,14 @@
     }
   }
 
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .logo {
+  /* Resp-container {
       width: 140px;
       height: 140px;
     }
   }
 
+  @media (max-width: 480px) {
+    .logo-container
   @media (max-width: 480px) {
     .logo {
       width: 120px;
