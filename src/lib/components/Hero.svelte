@@ -15,7 +15,6 @@
       target="_blank"
       href="/discord"
       class="px-6 py-4 rounded-2xl select-none transition-all text-red-900 bg-red-100/80 hover:bg-red-100 hover:scale-105 disabled:opacity-50"
-      disabled
     >
       Join the Discord!
     </a>
