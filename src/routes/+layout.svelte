@@ -3,6 +3,7 @@
 
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
+  import { page } from "$app/stores";
 
   let { children } = $props();
 </script>
@@ -15,9 +16,11 @@
   {@render children()}
 </main>
 
+{#if !$page.url.pathname.includes('/archive/2024')}
 <footer class="p-8 bg-linear-to-br from-rose-400 to-red-300">
   <Footer />
 </footer>
+{/if}
 <!-- <style>
   .glass-header {
     position: fixed;
