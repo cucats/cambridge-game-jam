@@ -1,5 +1,5 @@
 <script>
-  import PriorJamPage from "$lib/components/archive/PriorJamPage.svelte";
+  import CGJ2024Splash from "$lib/components/archive/CGJ2024Splash.svelte";
   const title = "Cambridge Game Jam 2024";
   const duration = "9th - 11th February";
   const submissions = 23;
@@ -51,4 +51,4 @@
   ];
 </script>
 
-<PriorJamPage {images} {title} {duration} {submissions} {theme} />
+<CGJ2024Splash {images} {title} {duration} {submissions} {theme} />
