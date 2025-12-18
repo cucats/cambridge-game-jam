@@ -19,8 +19,8 @@
         This jam is our excuse to champion projects that exist purely for the
         joy of making them. We welcome <strong>curious beginners</strong> and
         <strong>seasoned devs</strong> alike—tinker with a tool you have never touched,
-        chase an odd idea, and ship something that makes you grin simply because
-        you brought it to life.
+        chase an odd idea, and ship something that makes you grin simply because you
+        brought it to life.
       </p>
     </div>
   </div>
