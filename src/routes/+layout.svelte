@@ -2,9 +2,12 @@
   import "../app.css";
 
   import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/header/Header.svelte";
+  import { page } from "$app/stores";
 
   let { children } = $props();
+  let hideSharedFooter = $derived(
+    $page.url.pathname === "/archive/2024" || $page.url.pathname.startsWith("/archive/2024/"),
+  );
 </script>
 
 <!-- <header class="glass-header">
@@ -15,9 +18,11 @@
   {@render children()}
 </main>
 
-<footer class="p-8 bg-linear-to-br from-rose-400 to-red-300">
-  <Footer />
-</footer>
+{#if !hideSharedFooter}
+  <footer class="p-8 bg-linear-to-br from-rose-400 to-red-300">
+    <Footer />
+  </footer>
+{/if}
 <!-- <style>
   .glass-header {
     position: fixed;
