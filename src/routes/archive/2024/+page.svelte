@@ -354,11 +354,15 @@
         if (crystal.userData.orbitRadius > 0) {
           crystal.position.x =
             crystal.userData.originalX +
-            Math.sin(time * crystal.userData.orbitSpeed + crystal.userData.orbitOffset) *
+            Math.sin(
+              time * crystal.userData.orbitSpeed + crystal.userData.orbitOffset,
+            ) *
               crystal.userData.orbitRadius;
           crystal.position.z =
             crystal.userData.originalZ +
-            Math.cos(time * crystal.userData.orbitSpeed + crystal.userData.orbitOffset) *
+            Math.cos(
+              time * crystal.userData.orbitSpeed + crystal.userData.orbitOffset,
+            ) *
               crystal.userData.orbitRadius;
         }
 
@@ -396,18 +400,15 @@
         particle.position.z = (Math.random() - 0.5) * 20;
       }
 
-      particle.material.opacity = 0.3 + Math.sin(time * 3 + particle.userData.life) * 0.5;
+      particle.material.opacity =
+        0.3 + Math.sin(time * 3 + particle.userData.life) * 0.5;
     });
 
     const cameraRadius = 0.8;
     camera.position.x = Math.sin(time * 0.15) * cameraRadius;
     camera.position.y = 2 + Math.sin(time * 0.2) * 0.4 + scrollY * 0.002;
     camera.position.z = 12 + Math.cos(time * 0.1) * 0.5;
-    camera.lookAt(
-      Math.sin(time * 0.1) * 0.3,
-      Math.sin(time * 0.15) * 0.2,
-      0,
-    );
+    camera.lookAt(Math.sin(time * 0.1) * 0.3, Math.sin(time * 0.15) * 0.2, 0);
 
     renderer.render(scene, camera);
   }
@@ -466,7 +467,9 @@
       <div class="hero-text">
         <h1 class="main-title">
           {#each title.split("") as char, i}
-            <span class="char" style="--delay: {i * 0.05}s">{char === " " ? "\u00A0" : char}</span>
+            <span class="char" style="--delay: {i * 0.05}s"
+              >{char === " " ? "\u00A0" : char}</span
+            >
           {/each}
         </h1>
         <p class="date-text">{duration}</p>
@@ -640,7 +643,9 @@
     height: 200px;
     object-fit: contain;
     filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
-    animation: logoFloat 4s ease-in-out infinite, logoPulse 2s ease-in-out infinite;
+    animation:
+      logoFloat 4s ease-in-out infinite,
+      logoPulse 2s ease-in-out infinite;
     position: relative;
     z-index: 2;
   }
@@ -652,7 +657,11 @@
     transform: translate(-50%, -50%);
     width: 250px;
     height: 250px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.4) 0%,
+      transparent 70%
+    );
     animation: glowPulse 3s ease-in-out infinite;
     z-index: 1;
   }
@@ -678,23 +687,38 @@
   }
 
   @keyframes logoFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-15px) rotate(2deg); }
-    50% { transform: translateY(-5px) rotate(0deg); }
-    75% { transform: translateY(-20px) rotate(-2deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-20px) rotate(-2deg);
+    }
   }
 
   @keyframes logoPulse {
-    0%, 100% { filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.5)); }
-    50% { filter: drop-shadow(0 0 50px rgba(236, 72, 153, 0.7)); }
+    0%,
+    100% {
+      filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 50px rgba(236, 72, 153, 0.7));
+    }
   }
 
   @keyframes glowPulse {
-    0%, 100% { 
+    0%,
+    100% {
       transform: translate(-50%, -50%) scale(1);
       opacity: 0.5;
     }
-    50% { 
+    50% {
       transform: translate(-50%, -50%) scale(1.3);
       opacity: 0.8;
     }
@@ -729,7 +753,9 @@
 
   .char {
     display: inline-block;
-    animation: charReveal 0.5s ease forwards, charFloat 3s ease-in-out infinite;
+    animation:
+      charReveal 0.5s ease forwards,
+      charFloat 3s ease-in-out infinite;
     animation-delay: var(--delay), calc(var(--delay) + 0.5s);
     opacity: 0;
     transform: translateY(20px);
@@ -743,14 +769,25 @@
   }
 
   @keyframes charFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
   }
 
   @keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .date-text {
@@ -780,7 +817,9 @@
     margin-bottom: 1.5rem;
     position: relative;
     overflow: hidden;
-    animation: fadeSlideUp 0.8s ease 0.7s forwards, badgePulse 2s ease-in-out infinite;
+    animation:
+      fadeSlideUp 0.8s ease 0.7s forwards,
+      badgePulse 2s ease-in-out infinite;
     opacity: 0;
     transform: translateY(20px);
   }
@@ -801,16 +840,21 @@
   }
 
   @keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 200%; }
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
   }
 
   @keyframes badgePulse {
-    0%, 100% { 
+    0%,
+    100% {
       box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
       border-color: rgba(139, 92, 246, 0.3);
     }
-    50% { 
+    50% {
       box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
       border-color: rgba(236, 72, 153, 0.5);
     }
@@ -829,8 +873,15 @@
   }
 
   @keyframes textGlow {
-    0%, 100% { text-shadow: 0 0 10px rgba(232, 121, 249, 0.5); }
-    50% { text-shadow: 0 0 20px rgba(232, 121, 249, 0.8), 0 0 30px rgba(232, 121, 249, 0.4); }
+    0%,
+    100% {
+      text-shadow: 0 0 10px rgba(232, 121, 249, 0.5);
+    }
+    50% {
+      text-shadow:
+        0 0 20px rgba(232, 121, 249, 0.8),
+        0 0 30px rgba(232, 121, 249, 0.4);
+    }
   }
 
   .submissions-text {
@@ -857,8 +908,13 @@
   }
 
   @keyframes countPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
 
   .submissions-link:hover {
@@ -880,7 +936,9 @@
   }
 
   @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+      opacity: 1;
+    }
   }
 
   .scroll-text {
@@ -900,8 +958,15 @@
   }
 
   @keyframes scrollBounce {
-    0%, 100% { transform: rotate(45deg) translateY(0); opacity: 1; }
-    50% { transform: rotate(45deg) translateY(10px); opacity: 0.5; }
+    0%,
+    100% {
+      transform: rotate(45deg) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(45deg) translateY(10px);
+      opacity: 0.5;
+    }
   }
 
   .about-section,
@@ -928,7 +993,11 @@
 
   .shape {
     position: absolute;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+    background: linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.1),
+      rgba(236, 72, 153, 0.1)
+    );
     border-radius: 50%;
   }
 
@@ -958,10 +1027,19 @@
   }
 
   @keyframes shapeFloat {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(20px, -30px) rotate(90deg); }
-    50% { transform: translate(-10px, -50px) rotate(180deg); }
-    75% { transform: translate(30px, -20px) rotate(270deg); }
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(20px, -30px) rotate(90deg);
+    }
+    50% {
+      transform: translate(-10px, -50px) rotate(180deg);
+    }
+    75% {
+      transform: translate(30px, -20px) rotate(270deg);
+    }
   }
 
   .section-title {
@@ -979,19 +1057,25 @@
     transform: translateY(30px);
   }
 
-  .title-word:nth-child(1) { animation-delay: 0.1s; }
-  .title-word:nth-child(2) { animation-delay: 0.2s; }
-  .title-word:nth-child(3) { animation-delay: 0.3s; }
+  .title-word:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .title-word:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .title-word:nth-child(3) {
+    animation-delay: 0.3s;
+  }
 
   @keyframes wordBounce {
-    0% { 
+    0% {
       opacity: 0;
       transform: translateY(30px) scale(0.5);
     }
     60% {
       transform: translateY(-10px) scale(1.1);
     }
-    100% { 
+    100% {
       opacity: 1;
       transform: translateY(0) scale(1);
     }
@@ -1049,7 +1133,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease, filter 0.3s ease;
+    transition:
+      transform 0.5s ease,
+      filter 0.3s ease;
   }
 
   .game-card:hover .game-image {
@@ -1092,8 +1178,12 @@
   }
 
   @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 200%; }
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
   }
 
   .game-info {
@@ -1128,9 +1218,16 @@
   }
 
   @keyframes trophyBounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-5px) rotate(-10deg); }
-    75% { transform: translateY(-5px) rotate(10deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-5px) rotate(-10deg);
+    }
+    75% {
+      transform: translateY(-5px) rotate(10deg);
+    }
   }
 
   .carousel-btn {
@@ -1339,8 +1436,13 @@
   }
 
   @keyframes arrowPulse {
-    0%, 100% { transform: translateX(-5px); }
-    50% { transform: translateX(-10px); }
+    0%,
+    100% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
   }
 
   @media (max-width: 768px) {
