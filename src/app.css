@@ -1,8 +1,50 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Peaberry Base';
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.eot');
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.eot?#iefix') format('embedded-opentype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.woff2') format('woff2'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.woff') format('woff'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.ttf') format('truetype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.svg#PeaberryBase') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Peaberry Monospace';
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.eot');
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.eot?#iefix') format('embedded-opentype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.woff2') format('woff2'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.woff') format('woff'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.ttf') format('truetype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Monospace/PeaberryMono.svg#PeaberryMono') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Peaberry Doublespace';
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.eot');
+  src: url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.eot?#iefix') format('embedded-opentype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.woff2') format('woff2'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.woff') format('woff'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.ttf') format('truetype'),
+    url('/2025/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/PeaberryDoublespace.svg#PeaberryDoublespace') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-ubuntu: Ubuntu mono, monospace;
   --font-lexend: Lexend, sans-serif;
+  --font-peaberry-base: 'Peaberry Base', monospace;
+  --font-peaberry-mono: 'Peaberry Monospace', monospace;
+  --font-peaberry-doublespace: 'Peaberry Doublespace', monospace;
 }
 
 html {
