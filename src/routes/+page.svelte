@@ -2,6 +2,7 @@
   import ComingSoon from "$lib/components/ComingSoon.svelte";
   import About from "$lib/components/About.svelte";
   import Organisers from "$lib/components/Organisers.svelte";
+  import LandingPage from "../lib/components/LandingPage.svelte";
 </script>
 
 <svelte:head>
@@ -9,7 +10,7 @@
   <meta name="description" content="The Cambridge Game Jam 2026" />
 </svelte:head>
 
-<ComingSoon />
+<LandingPage />
 
 <section id="about" class="bg-white">
   <About />
