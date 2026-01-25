@@ -34,7 +34,6 @@
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
-    background: white;
   }
 
   .about-content {

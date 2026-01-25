@@ -12,11 +12,11 @@
 
 <LandingPage />
 
-<section id="about" class="bg-white">
+<section id="about">
   <About />
 </section>
 
-<section id="organisers" class="bg-gray-50">
+<section id="organisers">
   <Organisers />
 </section>
 

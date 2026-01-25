@@ -5,32 +5,23 @@
   let expanded = $state(false);
 </script>
 
-<div class="max-w-7xl mx-auto">
+<div class="header-container">
   <div class="flex justify-between items-center h-[60px]">
-    <a href="/" class="select-none">
-      <div class="flex items-center">
+    <a href="/" class="select-none logo-link">
+      <div class="flex items-center gap-2">
         <img
-          class="h-[60px] ml-4"
+          class="h-[50px] logo-image"
           src="/2026/jam.png"
           alt="Cambridge Game Jam Logo"
         />
-        <span class="ml-4 text-xl font-bold">Cambridge Game Jam 2026</span>
+        <span class="logo-text">Cambridge Game Jam 2026</span>
       </div>
     </a>
     <div class="px-4">
       <nav
         class="max-md:hidden flex items-center gap-6 text-xl font-semibold transition-colors"
       >
-        <!-- <a class="hover:text-red-600" href="/archive">Archive</a> -->
-        <!-- <a class="hover:text-red-600" href="/#about">About</a>
-        <a class="hover:text-red-600" href="/#schedule">Schedule</a>
-        <a class="hover:text-red-600" href="/#rules">Rules</a>
-        <a class="hover:text-red-600" href="/#faq">FAQ</a>
-        <a
-          class="px-4 py-2 bg-red-300 rounded-lg transition-transform hover:scale-105"
-          href="/signup"
-          target="_blank">Sign up!</a
-        > -->
+        <!-- Navigation items here -->
       </nav>
       <Hamburger bind:expanded />
     </div>
@@ -39,3 +30,59 @@
     <MobileMenu bind:expanded />
   {/if}
 </div>
+
+<style>
+  .header-container {
+    max-width: 7xl;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+    position: relative;
+  }
+
+  .logo-link:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-link::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6dd9e8, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-link:hover::after {
+    opacity: 1;
+  }
+
+  .logo-image {
+    filter: drop-shadow(0 0 4px rgba(109, 241, 226, 0.4));
+    image-rendering: pixelated;
+  }
+
+  .logo-text {
+    font-family: "Peaberry Base", monospace;
+    color: #6dd9e8;
+    text-shadow:
+      0 0 8px rgba(109, 241, 226, 0.6),
+      0 0 16px rgba(32, 128, 200, 0.3);
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .logo-text {
+      display: none;
+    }
+  }
+</style>
