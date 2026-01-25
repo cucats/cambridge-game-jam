@@ -3,16 +3,13 @@
 
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
-  import Background from "$lib/components/Background.svelte";
 
   let { children } = $props();
 </script>
 
-<Background />
-<!-- 
 <header class="header">
   <Header />
-</header> -->
+</header>
 
 <main class="flex-1">
   {@render children()}
@@ -23,8 +20,19 @@
 </footer>
 
 <style>
+  :global(html),
   :global(body) {
-    background: transparent;
+    background-image: url("/2026/background.jpg");
+    background-size: cover;
+    background-position: 30% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  @media (max-width: 1024px) {
+    :global(html),
+    :global(body) {
+      background-size: auto 100vh;
+    }
   }
 
   .header {
