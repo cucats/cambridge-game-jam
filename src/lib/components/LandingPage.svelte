@@ -17,14 +17,24 @@
 <div class="landing">
   <div class="header-content">
     <h1 class="title">
-      <span class="line line-1">THE</span>
-      <span class="line line-2">CAMBRIDGE</span>
-      <span class="line line-3">GAME JAM</span>
-      <span class="line line-4">2026</span>
+      <span class="line">THE</span>
+      <span class="line">CAMBRIDGE</span>
+      <span class="line">GAME JAM</span>
+      <span class="line line-year">2026</span>
     </h1>
     <div class="countdown-wrap">
       <EventCountdown {registrationClose} {jamStart} {jamEnd} />
     </div>
+  </div>
+  <div class="scroll-wrap">
+    SCROLL DOWN
+    <a
+      href="#about"
+      class="scroll-down"
+      aria-label="Scroll down to about section"
+    >
+      &#x2304;
+    </a>
   </div>
 </div>
 
@@ -68,10 +78,30 @@
     font-size: clamp(1.5rem, 10vw, 6.5rem);
   }
 
+  .line-year {
+    color: #f05663;
+  }
+
   .countdown-wrap {
     margin-top: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .scroll-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .scroll-down {
+    font-size: 2rem;
+    margin-top: -12px;
+    text-decoration: none;
+    user-select: none;
   }
 </style>

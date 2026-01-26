@@ -1,31 +1,42 @@
-<script>
-  import YearSelector from "./YearSelector.svelte";
-</script>
-
 <div class="about-container">
   <div class="about-content">
-    <h2 class="about-title">About The Cambridge Game Jam</h2>
-
-    <div class="about-text">
-      <p>
-        <strong>Now in its fourth year</strong>, The Cambridge Game Jam is a 48
-        hour game jam hosted by the Cambridge University Computing and
-        Technology Society. Over an action-packed weekend, you will have 48
-        hours to build a game in teams or individually based around a theme
-        (announced at the beginning of the jam)!
-      </p>
-
-      <p>
-        This jam is our excuse to champion projects that exist purely for the
-        joy of making them. We welcome <strong>curious beginners</strong> and
-        <strong>seasoned devs</strong> alike—tinker with a tool you have never touched,
-        chase an odd idea, and ship something that makes you grin simply because
-        you brought it to life.
-      </p>
+    <h2 class="about-title">About</h2>
+    <div>
+      <div class="about-grid">
+        <div>
+          <div class="about-subtitle">What is a game jam?</div>
+          <img
+            src="/2026/jam-1.jpg"
+            alt="8-bit drawing of a jam"
+            class="float-right ml-4 mb-2 size-32 sm:size-40 md:size-48"
+          />
+          <p class="about-text">
+            Over an action-packed weekend, you will have 48 hours to build a
+            game in teams, based around a theme (announced at the beginning of
+            the jam)!
+            <br />
+            There will also be prizes for a range of categories, including music,
+            art, and more.
+          </p>
+        </div>
+        <div>
+          <div class="about-subtitle">Who is invited?</div>
+          <img
+            src="/2026/girl.jpg"
+            alt="8-bit drawing of a girl"
+            class="float-left mr-4 mb-2 size-32 sm:size-40 md:size-48"
+          />
+          <p class="about-text-right">
+            <strong>Everyone!</strong>
+            We welcome game developers, artists, musicians, and anything in between.
+            Whether you're a seasoned game developer or a complete beginner, this
+            event is for you. The jam is a great opportunity to learn new skills,
+            meet like-minded people, and have fun creating games together.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <YearSelector />
 </div>
 
 <style>
@@ -43,38 +54,44 @@
     text-align: center;
   }
 
+  .about-grid {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 600px) {
+    .about-grid {
+      flex-direction: column;
+    }
+  }
+
   .about-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 2rem;
     color: #1a1a1a;
-    animation: fade-in-up 0.8s ease-out both;
+    align-self: flex-start;
   }
 
   .about-text {
     max-width: 700px;
     margin: 0 auto;
+    text-align: justify;
   }
 
-  .about-text p {
-    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    color: #444;
-    animation: fade-in-up 0.8s ease-out both;
+  .about-text-right {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
   }
 
-  .about-text p:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-
-  .about-text p:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-
-  .about-text strong {
+  .about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     color: #000;
-    font-weight: 700;
   }
 
   @keyframes fade-in-up {

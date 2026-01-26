@@ -83,6 +83,9 @@
       </div>
     </div>
   </div>
+  {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
+    <div class="register-button">REGISTER NOW!</div>
+  {/if}
 </div>
 
 <style>
@@ -122,5 +125,15 @@
     font-size: 40px;
     line-height: 1;
     padding: 0 2px;
+  }
+
+  .register-button {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
   }
 </style>

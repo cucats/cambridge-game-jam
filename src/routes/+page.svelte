@@ -1,8 +1,11 @@
 <script>
-  import ComingSoon from "$lib/components/ComingSoon.svelte";
-  import About from "$lib/components/About.svelte";
-  import Organisers from "$lib/components/Organisers.svelte";
   import LandingPage from "../lib/components/LandingPage.svelte";
+  import About from "$lib/components/About.svelte";
+  import Schedule from "$lib/components/Schedule.svelte";
+  import Sponsors from "$lib/components/Sponsors.svelte";
+  import Faq from "$lib/components/Faq.svelte";
+  import YearSelector from "$lib/components/YearSelector.svelte";
+  import Organisers from "$lib/components/Organisers.svelte";
 </script>
 
 <svelte:head>
@@ -14,6 +17,22 @@
 
 <section id="about">
   <About />
+</section>
+
+<section id="schedule">
+  <Schedule />
+</section>
+
+<section id="sponsors">
+  <Sponsors />
+</section>
+
+<section id="faq">
+  <Faq />
+</section>
+
+<section id="archive">
+  <YearSelector />
 </section>
 
 <section id="organisers">
