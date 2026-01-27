@@ -15,7 +15,7 @@
   {@render children()}
 </main>
 
-<footer class="p-8 bg-linear-to-br from-rose-400 to-red-300">
+<footer>
   <Footer />
 </footer>
 

@@ -1,82 +1,85 @@
 <div class="organisers-section">
-  <div class="section-inner">
-    <h2 class="section-title">Organising Committee</h2>
-    <div class="names-card">
-      <p class="names-list">
-        <span class="name">James Leung</span>
-        <span class="name">Uliana Ronska</span>
-        <span class="name">Jadon Mensah</span>
-        <span class="name">Kotaro Yoshizawa</span>
-        <span class="name">Carol Bao</span>
-        <span class="name">Sophie Guenroc</span>
-      </p>
-    </div>
+  <h2 class="title">Organising Committee</h2>
+  <ul class="crew">
+    <li>James Leung</li>
+    <li>Uliana Ronska</li>
+    <li>Jadon Mensah</li>
+    <li>Kotaro Yoshizawa</li>
+    <li>Carol Bao</li>
+    <li>Sophie Guenroc</li>
+  </ul>
 
-    <h3>Special Thanks</h3>
-    <div class="thanks-card">
-      <p class="names-list thanks">
-        <span class="name">Ariane Dufour</span>
-        <span class="name">Amelie Roseblade</span>
-        <span class="name">Gwen Sellers</span>
-      </p>
-      <span class="role-text">✦ for artwork design ✦</span>
-    </div>
-  </div>
+  <h3 class="thanks-title">Special Thanks</h3>
+  <p class="note">— artwork —</p>
+  <ul class="crew thanks">
+    <li>Ariane Dufour</li>
+    <li>Amelie Roseblade</li>
+    <li>Gwen Sellers</li>
+  </ul>
 </div>
 
 <style>
   .organisers-section {
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto;
+    padding: 1.5rem 1rem;
     text-align: center;
   }
 
-  .section-inner {
-    padding: 1rem 1.5rem;
-  }
-
-  .names-card {
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .thanks-card {
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin-top: 0.75rem;
-  }
-
-  .names-list {
-    font-family: "Peaberry Base", monospace;
-    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
-    line-height: 2;
+  .title {
+    font-size: 1.4rem;
     color: #3d2914;
-    margin: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3d2914;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  .crew {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem 1.5rem;
+    gap: 0.3rem 0;
   }
 
-  .name {
-    transition: color 0.2s ease;
+  .crew li {
+    color: #3d2914;
+    font-size: 1rem;
   }
 
-  .name:hover {
-    color: #f05663;
+  .crew li::after {
+    content: "·";
+    margin: 0 0.6rem;
+    color: #86e293;
   }
 
-  .role-text {
-    display: block;
-    font-size: 0.85em;
-    color: #f05663;
-    margin-top: 0.75rem;
-    letter-spacing: 0.05em;
+  .crew li:last-child::after {
+    content: "";
+    margin: 0;
   }
 
-  h3 {
-    margin-top: 2rem;
+  .thanks-title {
+    font-size: 1rem;
+    color: #7a6b5a;
     margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .crew.thanks li {
+    color: #5a4a3a;
+  }
+
+  .crew.thanks li::after {
+    color: #f05663;
+  }
+
+  .note {
+    font-size: 0.8rem;
+    color: #a89880;
+    margin-top: 0.25rem;
+    letter-spacing: 0.1em;
   }
 </style>
