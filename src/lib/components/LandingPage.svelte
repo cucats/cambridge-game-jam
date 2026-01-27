@@ -217,16 +217,5 @@
     text-decoration: none;
     user-select: none;
     color: #1a1c1e;
-    animation: bounce 2s ease-in-out infinite;
-  }
-
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(8px);
-    }
   }
 </style>

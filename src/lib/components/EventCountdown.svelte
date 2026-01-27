@@ -129,13 +129,12 @@
 
   .register-button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 48px;
     font-size: 20px;
     font-weight: 700;
     padding: 14px 28px;
-    background: #f05663;
-    color: #ffffff;
-    border: 4px solid #1a1c1e;
+    color: #1a1c1e;
+    border: #1a1c1e 4px solid;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
@@ -146,11 +145,6 @@
 
   .register-button:hover {
     transform: translate(2px, 2px);
-    box-shadow:
-      2px 2px 0 #3d2914,
-      inset -3px -3px 0 rgba(0, 0, 0, 0.2),
-      inset 3px 3px 0 rgba(255, 255, 255, 0.2);
-    background: #ff6b7a;
   }
 
   .register-button:active {

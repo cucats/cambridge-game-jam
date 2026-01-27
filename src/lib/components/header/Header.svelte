@@ -80,13 +80,8 @@
     <div class="dates">
       <div class="dates-inner">2026&nbsp;&nbsp;1/1&nbsp;&ndash;&nbsp;1/2</div>
     </div>
-    <a href="/signup" class="register-btn" class:show={scrolled}>
-      <img
-        src="https://unpkg.com/pixelarticons@1.8.1/svg/user-plus.svg"
-        alt="register"
-        class="register-icon"
-      />
-      <span class="register-text">REGISTER</span>
+    <a href="/" class="register-btn" class:show={scrolled}>
+      <span class="register-text">THE CAMBRIDGE GAME JAM 2026</span>
     </a>
     <nav class="nav-vertical" class:icons-only={scrolled}>
       {#each sections as section}
@@ -131,7 +126,6 @@
     padding: 0.5rem 1rem;
     background: rgba(255, 231, 168, 0.92);
     border-bottom: 3px solid #3d2914;
-    box-shadow: 0 2px 0 rgba(61, 41, 20, 0.3);
   }
 
   .header-grid {
@@ -214,7 +208,6 @@
 
   .nav-link.active {
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   /* Register button in header */
@@ -223,20 +216,16 @@
     gap: 0.4em;
     font-family: "Peaberry Base", monospace;
     font-size: clamp(0.75rem, 2vw, 0.9rem);
-    color: #ffffff;
-    background: #f05663;
-    border: 3px solid #3d2914;
-    box-shadow:
-      3px 3px 0 #3d2914,
-      inset -2px -2px 0 rgba(0, 0, 0, 0.15),
-      inset 2px 2px 0 rgba(255, 255, 255, 0.15);
+    color: #000000;
+    cursor: pointer;
     padding: 0.4em 0.8em;
     text-decoration: none;
     letter-spacing: 0.5px;
     transition: all 0.15s ease;
     display: none;
     position: absolute;
-    left: 1rem;
+    left: 0.5rem;
+    top: 0.5rem;
   }
 
   .register-btn.show {
@@ -245,21 +234,10 @@
 
   .register-btn:hover {
     transform: translate(1px, 1px);
-    box-shadow:
-      2px 2px 0 #3d2914,
-      inset -2px -2px 0 rgba(0, 0, 0, 0.15),
-      inset 2px 2px 0 rgba(255, 255, 255, 0.15);
-    background: #ff6b7a;
   }
 
   .register-btn.show:hover {
     transform: translate(1px, 1px);
-  }
-
-  .register-icon {
-    width: 1.4em;
-    height: 1em;
-    filter: brightness(0) invert(1);
   }
 
   .register-text {
@@ -272,9 +250,6 @@
   }
 
   @media (max-width: 768px) {
-    .register-text {
-      display: none;
-    }
     .header-grid {
       grid-template-columns: 1fr;
       gap: 0.5rem;
