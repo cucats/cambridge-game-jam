@@ -73,7 +73,7 @@
     // As you scroll, the landing section gains a negative bottom margin, pulling the content below it up.
     // This creates an overlap effect, effectively making the landing page "shrink" into the next section.
     const maxPullUpPx = 800; // The maximum amount (in pixels) the next section will be pulled up
-    const pullUpScrollDistance = 600; // The scroll distance (in pixels) over which the pull-up effect occurs
+    const pullUpScrollDistance = 350; // The scroll distance (in pixels) over which the pull-up effect occurs
 
     // Calculate scroll progress, clamped between 0 and 1
     const progress = Math.min(1, scrollY / pullUpScrollDistance);
@@ -142,6 +142,12 @@
     padding: 2rem 1rem 4rem;
     margin-top: 160px;
     position: relative;
+  }
+
+  @media (max-width: 1024px) {
+    .landing {
+      background-size: auto 100vh;
+    }
   }
 
   .header-content {

@@ -26,12 +26,12 @@
     background-size: cover;
     background-position: 30% 0%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
   @media (max-width: 1024px) {
     :global(html),
     :global(body) {
-      background-size: auto 100vh;
+      background-size: auto 132vh;
     }
   }
 

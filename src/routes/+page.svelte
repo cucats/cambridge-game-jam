@@ -8,6 +8,7 @@
   import Faq from "$lib/components/Faq.svelte";
   import YearSelector from "$lib/components/YearSelector.svelte";
   import Organisers from "$lib/components/Organisers.svelte";
+  import DuckBorder from "../lib/components/duck-border.svelte";
 
   let scrollY = $state(0);
   let windowHeight = $state(0);
@@ -105,9 +106,10 @@
   <About />
 </section>
 
-<!-- <section id="schedule" class="parallax-section" style={scheduleStyle}>
+<section id="schedule" class="parallax-section" style={scheduleStyle}>
+  <DuckBorder />
   <Schedule />
-</section> -->
+</section>
 
 <section id="sponsors" class="parallax-section" style={sponsorsStyle}>
   <Sponsors />

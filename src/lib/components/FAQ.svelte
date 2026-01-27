@@ -81,6 +81,19 @@
     </FAQuestion>
     <FAQuestion>
       {#snippet question()}
+        <span>What's the maximum team size?</span>
+      {/snippet}
+      Max team size is 5.
+    </FAQuestion>
+    <FAQuestion>
+      {#snippet question()}
+        <span>What materials are available for physical games?</span>
+      {/snippet}
+      For people making physical games, we will provide card, paper, dice and game
+      pieces to help you bring your craziest game ideas into reality!
+    </FAQuestion>
+    <FAQuestion>
+      {#snippet question()}
         <span>You didn't answer my questions!</span>
       {/snippet}
       You can ask us anything in our

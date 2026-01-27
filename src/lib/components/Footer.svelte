@@ -19,7 +19,6 @@
     border-top: 2px solid #3d2914;
     background: #3d2914;
     padding: 1.25rem 1rem;
-    margin-top: 2rem;
   }
 
   .footer-inner {

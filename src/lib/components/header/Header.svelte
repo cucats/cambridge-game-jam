@@ -8,7 +8,7 @@
 
   const sections = [
     { id: "about", href: "/#about", icon: "info-box", label: "About" },
-    // { id: "schedule", href: "/#schedule", icon: "calendar", label: "Schedule" },
+    { id: "schedule", href: "/#schedule", icon: "calendar", label: "Schedule" },
     { id: "sponsors", href: "/#sponsors", icon: "heart", label: "Sponsors" },
     { id: "faq", href: "/#faq", icon: "message-text", label: "FAQ" },
     { id: "archive", href: "/#archive", icon: "archive", label: "Archive" },
@@ -124,7 +124,7 @@
     max-width: none;
     margin: 0rem 0 0 0;
     padding: 0.5rem 1rem;
-    background: rgba(255, 231, 168, 0.92);
+    background: #ffe7a8eb;
     border-bottom: 3px solid #3d2914;
   }
 
@@ -246,7 +246,12 @@
 
   /* When header is expanded, add a large scroll offset to counter the landing shrink */
   :global(body.header-expanded .parallax-section) {
-    scroll-margin-top: 800px;
+    scroll-margin-top: 828px;
+  }
+
+  /* When header is collapsed/scrolled, account for fixed header height */
+  :global(body:not(.header-expanded) .parallax-section) {
+    scroll-margin-top: 2rem;
   }
 
   @media (max-width: 768px) {
