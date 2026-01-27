@@ -16,7 +16,14 @@
   ];
 
   function handleScroll() {
-    scrolled = window.scrollY > 200;
+    // Get about section position for threshold calculation
+    const aboutSection = document.getElementById("about");
+    const aboutTop = aboutSection ? aboutSection.offsetTop : 800;
+
+    // Header collapses when scrolled past 15% of landing page
+    // This matches the landing page snap zone threshold
+    const threshold = aboutTop * 0.15;
+    scrolled = window.scrollY > threshold;
 
     // Check which section is currently in view
     const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -36,7 +43,7 @@
     }
 
     // If at top of page, clear active section
-    if (window.scrollY < 200) {
+    if (window.scrollY < threshold) {
       activeSection = "";
     }
   }

@@ -5,79 +5,71 @@
   let mounted = false;
   let scrollY = $state(0);
   let windowHeight = $state(0);
-  let ticking = false;
 
   // Event dates
   const registrationClose = new Date("2026-01-29T23:59:59");
   const jamStart = new Date("2026-03-01T00:00:00");
   const jamEnd = new Date("2026-03-02T23:59:59");
 
-  // Parallax calculations - using Dave Gamache's principles
-  // Effects start after scrolling past 200px
+  // Easing function - easeOutQuart for smooth deceleration (matches header feel)
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  // Get the about section position for clamping parallax
+  function getAboutTop() {
+    const aboutSection = document.getElementById("about");
+    return aboutSection ? aboutSection.offsetTop : 800;
+  }
+
+  // Parallax calculations - only apply within landing page zone
+  // When scrolled past about section, elements stay hidden
+  // When scrolling back, they fade back in
   let titleTransform = $derived.by(() => {
-    const effectiveScroll = Math.max(0, scrollY - 200);
-    const translateY = Math.round(effectiveScroll * 0.4);
-    const scale = Math.max(0.8, 1 - effectiveScroll * 0.0003);
-    const opacity = Math.max(0, 1 - effectiveScroll / 200);
+    const aboutTop = typeof window !== "undefined" ? getAboutTop() : 800;
+    // Clamp scroll to landing page area only
+    const effectiveScroll = Math.min(scrollY, aboutTop);
+    const progress = Math.min(1, effectiveScroll / (aboutTop * 0.8));
+    const eased = easeOutQuart(progress);
+    const translateY = Math.round(effectiveScroll * 0.35);
+    const scale = 1 - eased * 0.15;
+    const opacity = Math.max(0, 1 - eased * 1.2);
     return {
       transform: `translate3d(0, ${translateY}px, 0) scale(${scale.toFixed(3)})`,
       opacity: opacity.toFixed(2),
     };
   });
 
+  // Countdown moves at medium speed, fades slightly later than title
   let countdownTransform = $derived.by(() => {
-    const effectiveScroll = Math.max(0, scrollY - 200);
-    const translateY = Math.round(effectiveScroll * 0.25);
-    const opacity = Math.max(0, 1 - effectiveScroll / 500);
+    const aboutTop = typeof window !== "undefined" ? getAboutTop() : 800;
+    const effectiveScroll = Math.min(scrollY, aboutTop);
+    const progress = Math.min(1, effectiveScroll / (aboutTop * 0.6));
+    const eased = easeOutQuart(progress);
+    const translateY = Math.round(effectiveScroll * 0.2);
+    const opacity = Math.max(0, 1 - eased * 1.1);
     return {
       transform: `translate3d(0, ${translateY}px, 0)`,
       opacity: opacity.toFixed(2),
     };
   });
 
+  // Scroll indicator fades fastest, creates depth
   let scrollIndicatorTransform = $derived.by(() => {
-    const effectiveScroll = Math.max(0, scrollY - 200);
-    const translateY = Math.round(effectiveScroll * 0.6);
-    const opacity = Math.max(0, 1 - effectiveScroll / 300);
+    const aboutTop = typeof window !== "undefined" ? getAboutTop() : 800;
+    const effectiveScroll = Math.min(scrollY, aboutTop);
+    const progress = Math.min(1, effectiveScroll / (aboutTop * 0.4));
+    const eased = easeOutQuart(progress);
+    const translateY = Math.round(effectiveScroll * 0.5);
+    const opacity = Math.max(0, 1 - eased * 1.5);
     return {
       transform: `translate3d(0, ${translateY}px, 0)`,
       opacity: opacity.toFixed(2),
     };
   });
-
-  let isAutoScrolling = false;
-  let lastScrollY = 0;
 
   function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        scrollY = window.scrollY;
-
-        // Auto-scroll to about section if scrolled past 200px (and scrolling down)
-        if (
-          !isAutoScrolling &&
-          scrollY > 200 &&
-          scrollY > lastScrollY &&
-          scrollY < 600
-        ) {
-          isAutoScrolling = true;
-          const aboutSection = document.getElementById("about");
-          if (aboutSection) {
-            aboutSection.scrollIntoView({ behavior: "smooth" });
-            // Reset auto-scroll lock after animation completes
-            setTimeout(() => {
-              isAutoScrolling = false;
-            }, 800);
-          } else {
-            isAutoScrolling = false;
-          }
-        }
-
-        lastScrollY = scrollY;
-        ticking = false;
-      });
-      ticking = true;
-    }
+    scrollY = window.scrollY;
   }
 
   onMount(() => {
@@ -206,8 +198,12 @@
   }
 
   .scroll-down {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 2rem;
-    margin-top: -12px;
+    margin-top: 0px;
     text-decoration: none;
     user-select: none;
     color: #3d2914;

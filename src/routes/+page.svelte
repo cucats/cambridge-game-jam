@@ -13,15 +13,20 @@
   let windowHeight = $state(0);
   let ticking = false;
 
-  // Section parallax configs - following Dave Gamache's approach
-  // Only use translate3d, scale, opacity for GPU acceleration
+  // Easing function - easeOutQuart (matches header & landing page)
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  // Section parallax configs - coordinated with header's 0.3s ease
+  // Subtle reveal animations that feel connected to the scroll
   const sectionConfigs = [
-    { id: "about", speed: 0.05, revealOffset: 100 },
-    { id: "schedule", speed: 0.03, revealOffset: 150 },
-    { id: "sponsors", speed: 0.04, revealOffset: 120 },
-    { id: "faq", speed: 0.03, revealOffset: 100 },
-    { id: "archive", speed: 0.02, revealOffset: 80 },
-    { id: "organisers", speed: 0.02, revealOffset: 80 },
+    { id: "about", revealOffset: 60, fadeDistance: 400 },
+    { id: "schedule", revealOffset: 80, fadeDistance: 350 },
+    { id: "sponsors", revealOffset: 70, fadeDistance: 380 },
+    { id: "faq", revealOffset: 60, fadeDistance: 350 },
+    { id: "archive", revealOffset: 50, fadeDistance: 300 },
+    { id: "organisers", revealOffset: 50, fadeDistance: 300 },
   ];
 
   function getSectionStyle(sectionId) {
@@ -31,19 +36,17 @@
     const el = document.getElementById(sectionId);
     if (!el) return "";
 
-    const rect = el.getBoundingClientRect();
     const elementTop = el.offsetTop;
-    const viewportCenter = scrollY + windowHeight / 2;
-
-    // Calculate reveal progress (0 to 1)
     const distanceFromView = elementTop - scrollY - windowHeight;
-    const revealProgress = Math.min(1, Math.max(0, 1 - distanceFromView / 300));
 
-    // Parallax translation - subtle movement
-    const scrollOffset = scrollY - elementTop + windowHeight;
-    const translateY = Math.round(scrollOffset * config.speed);
+    // Calculate reveal progress with easing
+    const rawProgress = Math.min(
+      1,
+      Math.max(0, 1 - distanceFromView / config.fadeDistance),
+    );
+    const revealProgress = easeOutQuart(rawProgress);
 
-    // Reveal animation values
+    // Reveal animation - slides up and fades in
     const opacity = revealProgress.toFixed(2);
     const revealTranslateY = Math.round(
       (1 - revealProgress) * config.revealOffset,

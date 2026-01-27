@@ -41,7 +41,7 @@
       const fadeOut = el.dataset.parallaxFade === "true";
 
       // Only animate if in viewport (with buffer)
-      const inViewport = rect.bottom > -200 && rect.top < windowHeight + 200;
+      const inViewport = rect.bottom > 0 && rect.top < windowHeight;
 
       if (!inViewport) return;
 
