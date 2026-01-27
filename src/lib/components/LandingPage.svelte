@@ -68,6 +68,22 @@
     };
   });
 
+  // Landing container uses negative margin-bottom to pull the next section up
+  let landingStyle = $derived.by(() => {
+    // As you scroll, the landing section gains a negative bottom margin, pulling the content below it up.
+    // This creates an overlap effect, effectively making the landing page "shrink" into the next section.
+    const maxPullUpPx = 800; // The maximum amount (in pixels) the next section will be pulled up
+    const pullUpScrollDistance = 600; // The scroll distance (in pixels) over which the pull-up effect occurs
+
+    // Calculate scroll progress, clamped between 0 and 1
+    const progress = Math.min(1, scrollY / pullUpScrollDistance);
+    // Apply easing for a smoother deceleration effect
+    const eased = easeOutQuart(progress);
+    // Calculate the negative margin-bottom
+    const marginBottom = -eased * maxPullUpPx;
+    return `margin-bottom: ${marginBottom.toFixed(1)}px;`;
+  });
+
   function onScroll() {
     scrollY = window.scrollY;
   }
@@ -85,7 +101,7 @@
   });
 </script>
 
-<div class="landing">
+<div class="landing" style={landingStyle}>
   <div
     class="header-content parallax-element"
     style="transform: {titleTransform.transform}; opacity: {titleTransform.opacity};"
@@ -123,7 +139,7 @@
 <style>
   .landing {
     min-height: 100vh;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 4rem;
     margin-top: 160px;
     position: relative;
   }
@@ -184,13 +200,10 @@
   }
 
   .scroll-wrap {
-    position: absolute;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
     font-family: "Peaberry Base", monospace;
     color: #3d2914;
     font-size: 0.9rem;
@@ -198,12 +211,8 @@
   }
 
   .scroll-down {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 2rem;
-    margin-top: 0px;
+    margin-top: -8px;
     text-decoration: none;
     user-select: none;
     color: #3d2914;
