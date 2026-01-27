@@ -5,19 +5,20 @@
       "name": "camgamejam",
       "dependencies": {
         "@sveltejs/adapter-node": "^5.4.0",
+        "pixelarticons": "1.8.0",
       },
       "devDependencies": {
-        "@sveltejs/kit": "^2.48.4",
+        "@sveltejs/kit": "^2.49.2",
         "@sveltejs/vite-plugin-svelte": "^6.2.1",
-        "@tailwindcss/postcss": "^4.1.16",
+        "@tailwindcss/postcss": "^4.1.18",
         "postcss": "^8.5.6",
-        "prettier": "^3.6.2",
-        "prettier-plugin-svelte": "^3.4.0",
-        "prettier-plugin-tailwindcss": "^0.7.1",
-        "svelte": "^5.43.3",
-        "svelte-check": "^4.3.3",
-        "tailwindcss": "^4.1.16",
-        "vite": "^7.1.12",
+        "prettier": "^3.7.4",
+        "prettier-plugin-svelte": "^3.4.1",
+        "prettier-plugin-tailwindcss": "^0.7.2",
+        "svelte": "^5.46.0",
+        "svelte-check": "^4.3.4",
+        "tailwindcss": "^4.1.18",
+        "vite": "^7.3.0",
       },
     },
   },
@@ -277,6 +278,8 @@
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 
     "picomatch": ["picomatch@4.0.3", "", {}, "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q=="],
+
+    "pixelarticons": ["pixelarticons@1.8.0", "", {}, "sha512-BJ/F5JQROW3t2ktTeBvaGndKhlRCaMpDauT26AzHsY6HX1FOs09aY4LMUH7f61lSI+1+QfNf98IvC4aeiCYfvA=="],
 
     "postcss": ["postcss@8.5.6", "", { "dependencies": { "nanoid": "^3.3.11", "picocolors": "^1.1.1", "source-map-js": "^1.2.1" } }, "sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg=="],
 
