@@ -7,9 +7,9 @@
   let windowHeight = $state(0);
 
   // Event dates
-  const registrationClose = new Date("2026-01-29T23:59:59");
-  const jamStart = new Date("2026-03-01T00:00:00");
-  const jamEnd = new Date("2026-03-02T23:59:59");
+  const registrationClose = new Date("2026-02-10T23:59:59");
+  const jamStart = new Date("2026-02-27T18:00:00");
+  const jamEnd = new Date("2026-03-01T16:00:00");
 
   // Easing function - easeOutQuart for smooth deceleration (matches header feel)
   function easeOutQuart(t) {
