@@ -8,7 +8,7 @@
 
   const sections = [
     { id: "about", href: "/#about", icon: "info-box", label: "About" },
-    { id: "schedule", href: "/#schedule", icon: "calendar", label: "Schedule" },
+    // { id: "schedule", href: "/#schedule", icon: "calendar", label: "Schedule" },
     { id: "sponsors", href: "/#sponsors", icon: "heart", label: "Sponsors" },
     { id: "faq", href: "/#faq", icon: "message-text", label: "FAQ" },
     { id: "archive", href: "/#archive", icon: "archive", label: "Archive" },

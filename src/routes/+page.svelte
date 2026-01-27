@@ -105,9 +105,9 @@
   <About />
 </section>
 
-<section id="schedule" class="parallax-section" style={scheduleStyle}>
+<!-- <section id="schedule" class="parallax-section" style={scheduleStyle}>
   <Schedule />
-</section>
+</section> -->
 
 <section id="sponsors" class="parallax-section" style={sponsorsStyle}>
   <Sponsors />
