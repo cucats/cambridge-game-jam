@@ -84,7 +84,7 @@
     </div>
   </div>
   {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
-    <div class="register-button">REGISTER NOW!</div>
+    <a href="/signup" class="register-button">REGISTER NOW!</a>
   {/if}
 </div>
 
@@ -128,12 +128,40 @@
   }
 
   .register-button {
-    margin-top: 16px;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 28px;
+    background: #f05663;
+    color: #ffffff;
+    border: 4px solid #3d2914;
+    box-shadow:
+      4px 4px 0 #3d2914,
+      inset -3px -3px 0 rgba(0, 0, 0, 0.2),
+      inset 3px 3px 0 rgba(255, 255, 255, 0.2);
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
+    image-rendering: pixelated;
+  }
+
+  .register-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow:
+      2px 2px 0 #3d2914,
+      inset -3px -3px 0 rgba(0, 0, 0, 0.2),
+      inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+    background: #ff6b7a;
+  }
+
+  .register-button:active {
+    transform: translate(4px, 4px);
+    box-shadow:
+      0 0 0 #3d2914,
+      inset -3px -3px 0 rgba(0, 0, 0, 0.2),
+      inset 3px 3px 0 rgba(255, 255, 255, 0.2);
   }
 </style>

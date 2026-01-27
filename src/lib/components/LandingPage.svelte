@@ -208,6 +208,7 @@
     color: #3d2914;
     font-size: 0.9rem;
     letter-spacing: 2px;
+    padding-top: 120px;
   }
 
   .scroll-down {

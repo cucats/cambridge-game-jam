@@ -71,6 +71,14 @@
     <div class="dates">
       <div class="dates-inner">2026&nbsp;&nbsp;1/1&nbsp;&ndash;&nbsp;1/2</div>
     </div>
+    <a href="/signup" class="register-btn" class:show={scrolled}>
+      <img
+        src="https://unpkg.com/pixelarticons@1.8.1/svg/user-plus.svg"
+        alt="register"
+        class="register-icon"
+      />
+      <span class="register-text">REGISTER</span>
+    </a>
     <nav class="nav-vertical" class:icons-only={scrolled}>
       {#each sections as section}
         <a
@@ -97,8 +105,8 @@
 <style>
   .header-container {
     max-width: 1200px;
-    margin: 1rem auto;
-    padding: 0 1rem;
+    margin: 0rem auto;
+    padding: 1rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -109,8 +117,11 @@
 
   .header-container.scrolled {
     max-width: none;
-    margin: 0;
+    margin: 0rem 0 0 0;
     padding: 0.5rem 1rem;
+    background: rgba(255, 231, 168, 0.92);
+    border-bottom: 3px solid #3d2914;
+    box-shadow: 0 2px 0 rgba(61, 41, 20, 0.3);
   }
 
   .header-grid {
@@ -203,7 +214,64 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
 
+  /* Register button in header */
+  .register-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: "Peaberry Base", monospace;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    color: #ffffff;
+    background: #f05663;
+    border: 3px solid #3d2914;
+    box-shadow:
+      3px 3px 0 #3d2914,
+      inset -2px -2px 0 rgba(0, 0, 0, 0.15),
+      inset 2px 2px 0 rgba(255, 255, 255, 0.15);
+    padding: 0.4em 0.8em;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.15s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .register-btn.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .register-btn:hover {
+    transform: translate(1px, 1px);
+    box-shadow:
+      2px 2px 0 #3d2914,
+      inset -2px -2px 0 rgba(0, 0, 0, 0.15),
+      inset 2px 2px 0 rgba(255, 255, 255, 0.15);
+    background: #ff6b7a;
+  }
+
+  .register-btn.show:hover {
+    transform: translate(1px, 1px);
+  }
+
+  .register-icon {
+    width: 1.4em;
+    height: 1em;
+    filter: brightness(0) invert(1);
+  }
+
+  .register-text {
+    display: inline;
+  }
+
   @media (max-width: 768px) {
+    .register-text {
+      display: none;
+    }
     .header-grid {
       grid-template-columns: 1fr;
       gap: 0.5rem;
