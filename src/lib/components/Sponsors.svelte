@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto">
+<div class="sponsors">
   <h3 class="text-center sm:text-3xl">Sponsored by</h3>
   <grid class="mb-10 sm:mb-12 grid grid-cols-4 max-sm:grid-cols-2 text-center">
     <a class="inline-block" target="_blank" href="https://www.iconicgames.io">
@@ -71,3 +71,11 @@
     </div>
   </div>
 </div>
+
+<style>
+  .sponsors {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+</style>

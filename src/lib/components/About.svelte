@@ -4,7 +4,7 @@
   <div class="qa">
     <!-- <img src="/2026/jam-1.jpg" alt="8-bit drawing of a jam" class="qa-img" /> -->
     <div class="qa-text">
-      <h3>What is a game jam?</h3>
+      <h3>What is The Cambridge Game Jam?</h3>
       <p>
         Embark on an action-packed weekend challenge! You'll have <em
           >48 hours</em
