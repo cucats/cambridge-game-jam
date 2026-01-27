@@ -5,7 +5,6 @@
   let expanded = $state(false);
   let scrolled = $state(false);
   let activeSection = $state("");
-  let clickedSection = $state("");
 
   const sections = [
     { id: "about", href: "/#about", icon: "info-box", label: "About" },
@@ -24,6 +23,8 @@
     // This matches the landing page snap zone threshold
     const threshold = aboutTop * 0.15;
     scrolled = window.scrollY > threshold;
+
+    updateScrollMarginClass();
 
     // Check which section is currently in view
     const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -49,19 +50,27 @@
   }
 
   function handleClick(sectionId) {
-    clickedSection = sectionId;
-    // Reset clicked state after animation
     activeSection = sectionId;
-    setTimeout(() => {
-      clickedSection = "";
-    }, 300);
+  }
+
+  function updateScrollMarginClass() {
+    if (!browser) return;
+    if (!scrolled) {
+      document.body.classList.add("header-expanded");
+    } else {
+      document.body.classList.remove("header-expanded");
+    }
   }
 
   onMount(() => {
     if (browser) {
       window.addEventListener("scroll", handleScroll);
+      updateScrollMarginClass();
       handleScroll();
-      return () => window.removeEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        document.body.classList.remove("header-expanded");
+      };
     }
   });
 </script>
@@ -85,7 +94,6 @@
           href={section.href}
           class="nav-link"
           class:active={activeSection === section.id}
-          class:clicked={clickedSection === section.id}
           onclick={() => handleClick(section.id)}
         >
           <span class="nav-text">{section.label}</span>
@@ -93,8 +101,7 @@
             src="https://unpkg.com/pixelarticons@1.8.1/svg/{section.icon}.svg"
             alt={section.icon}
             class="nav-icon rounded"
-            class:icon-active={activeSection === section.id ||
-              clickedSection === section.id}
+            class:icon-active={activeSection === section.id}
           />
         </a>
       {/each}
@@ -112,7 +119,10 @@
     left: 0;
     right: 0;
     z-index: 100;
-    transition: all 0.3s ease;
+    transition:
+      max-width 0.3s ease,
+      margin 0.3s ease,
+      padding 0.3s ease;
   }
 
   .header-container.scrolled {
@@ -137,16 +147,11 @@
   }
 
   .dates {
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
+    transition: none;
   }
 
   .scrolled .dates {
-    opacity: 0;
-    transform: translateX(-20px);
-    position: absolute;
-    pointer-events: none;
+    display: none;
   }
 
   .dates-inner {
@@ -181,14 +186,12 @@
   }
 
   .nav-text {
-    transition: all 0.3s ease;
+    transition: none;
     overflow: hidden;
   }
 
   .icons-only .nav-text {
-    width: 0;
-    opacity: 0;
-    margin: 0;
+    display: none;
   }
 
   .nav-icon {
@@ -216,7 +219,6 @@
 
   /* Register button in header */
   .register-btn {
-    display: flex;
     align-items: center;
     gap: 0.4em;
     font-family: "Peaberry Base", monospace;
@@ -232,17 +234,13 @@
     text-decoration: none;
     letter-spacing: 0.5px;
     transition: all 0.15s ease;
-    opacity: 0;
-    transform: translateX(-10px);
-    pointer-events: none;
+    display: none;
     position: absolute;
     left: 1rem;
   }
 
   .register-btn.show {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
+    display: flex;
   }
 
   .register-btn:hover {
@@ -266,6 +264,11 @@
 
   .register-text {
     display: inline;
+  }
+
+  /* When header is expanded, add a large scroll offset to counter the landing shrink */
+  :global(body.header-expanded .parallax-section) {
+    scroll-margin-top: 800px;
   }
 
   @media (max-width: 768px) {
