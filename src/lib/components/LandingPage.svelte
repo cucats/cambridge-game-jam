@@ -177,8 +177,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    border-right: 4px solid #3d2914;
-    border-bottom: 4px solid #3d2914;
+    border-right: 4px solid #1a1c1e;
+    border-bottom: 4px solid #1a1c1e;
     pointer-events: none;
   }
 
@@ -205,7 +205,7 @@
     flex-direction: column;
     align-items: center;
     font-family: "Peaberry Base", monospace;
-    color: #3d2914;
+    color: #1a1c1e;
     font-size: 0.9rem;
     letter-spacing: 2px;
     padding-top: 120px;
@@ -216,7 +216,7 @@
     margin-top: -8px;
     text-decoration: none;
     user-select: none;
-    color: #3d2914;
+    color: #1a1c1e;
     animation: bounce 2s ease-in-out infinite;
   }
 

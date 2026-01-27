@@ -135,11 +135,7 @@
     padding: 14px 28px;
     background: #f05663;
     color: #ffffff;
-    border: 4px solid #3d2914;
-    box-shadow:
-      4px 4px 0 #3d2914,
-      inset -3px -3px 0 rgba(0, 0, 0, 0.2),
-      inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+    border: 4px solid #1a1c1e;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
