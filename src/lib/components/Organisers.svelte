@@ -6,6 +6,7 @@
     <li>Jadon Mensah</li>
     <li>Kotaro Yoshizawa</li>
     <li>Sophie Guenroc</li>
+    <li>Alex Pylypenko</li>
   </ul>
 
   <h3 class="thanks-title">Special Thanks</h3>
