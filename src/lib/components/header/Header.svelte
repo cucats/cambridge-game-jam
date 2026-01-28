@@ -126,7 +126,6 @@
 
 <style>
   .header-container {
-    max-width: 1200px;
     margin: 0rem auto;
     padding: 1rem 1rem;
     position: fixed;
