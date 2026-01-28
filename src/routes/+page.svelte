@@ -5,7 +5,7 @@
   import About from "$lib/components/About.svelte";
   import Schedule from "$lib/components/Schedule.svelte";
   import Sponsors from "$lib/components/Sponsors.svelte";
-  import Faq from "$lib/components/Faq.svelte";
+  import FAQ from "$lib/components/FAQ.svelte";
   import YearSelector from "$lib/components/YearSelector.svelte";
   import Organisers from "$lib/components/Organisers.svelte";
   import DuckBorder from "../lib/components/duck-border.svelte";
@@ -116,7 +116,7 @@
 </section>
 
 <section id="faq" class="parallax-section" style={faqStyle}>
-  <Faq />
+  <FAQ />
 </section>
 
 <section id="archive" class="parallax-section" style={archiveStyle}>
