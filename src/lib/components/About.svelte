@@ -1,104 +1,124 @@
-<script>
-  import YearSelector from "./YearSelector.svelte";
-</script>
+<div class="about">
+  <h2 class="section-title">About</h2>
 
-<div class="about-container">
-  <div class="about-content">
-    <h2 class="about-title">About The Cambridge Game Jam</h2>
-
-    <div class="about-text">
+  <div class="qa">
+    <!-- <img src="/2026/jam-1.jpg" alt="8-bit drawing of a jam" class="qa-img" /> -->
+    <div class="qa-text">
+      <h3>What is a Game Jam?</h3>
       <p>
-        <strong>Now in its fourth year</strong>, The Cambridge Game Jam is a 48
-        hour game jam hosted by the Cambridge University Computing and
-        Technology Society. Over an action-packed weekend, you will have 48
-        hours to build a game in teams or individually based around a theme
-        (announced at the beginning of the jam)!
-      </p>
-
-      <p>
-        This jam is our excuse to champion projects that exist purely for the
-        joy of making them. We welcome <strong>curious beginners</strong> and
-        <strong>seasoned devs</strong> alike—tinker with a tool you have never touched,
-        chase an odd idea, and ship something that makes you grin simply because
-        you brought it to life.
+        A game jam is a short event where people come together to build a game
+        in teams! In this game jam you'll have roughly <em>48 hours</em> to
+        build
+        <strong>any game you can dream of</strong>: from video games to board
+        games to ARGs.
       </p>
     </div>
   </div>
 
-  <YearSelector />
+  <div class="qa flip">
+    <!-- <img src="/2026/girl.jpg" alt="8-bit drawing of a girl" class="qa-img" /> -->
+    <div class="qa-text">
+      <h3>Who is invited?</h3>
+      <p>
+        <strong>All current University of Cambridge students</strong> are
+        welcome, and we encourage you to invite your friends from
+        <em>any discipline</em>! We expect the average team to include
+        programmers, artists, sound designers, and writers - but this is very
+        game dependent and people are encouraged to do whatever they find fun.
+        We hope to create an
+        <strong>inclusive and welcoming environment</strong>, so that people
+        from any background can enjoy the event.
+      </p>
+    </div>
+  </div>
 </div>
 
 <style>
-  .about-container {
-    position: relative;
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background: white;
-  }
-
-  .about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 2rem 3rem;
-    text-align: center;
-  }
-
-  .about-title {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-    animation: fade-in-up 0.8s ease-out both;
-  }
-
-  .about-text {
+  .about {
     max-width: 700px;
-    margin: 0 auto;
+    height: 100vh;
+    margin: 0 0;
+    padding: 2rem 1rem 4rem;
+    place-self: center;
   }
 
-  .about-text p {
-    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-    line-height: 1.7;
+  .qa {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
-    color: #444;
-    animation: fade-in-up 0.8s ease-out both;
+    background: rgba(255, 253, 248, 0.9);
+    padding: 1.25rem;
+    border-left: 3px solid #86e293;
   }
 
-  .about-text p:nth-child(1) {
-    animation-delay: 0.2s;
+  .qa.flip {
+    flex-direction: row-reverse;
+    text-align: right;
+    border-left: none;
+    border-right: 3px solid #f05663;
   }
 
-  .about-text p:nth-child(2) {
-    animation-delay: 0.4s;
+  .qa-text h3 {
+    font-size: 1.15rem;
+    color: #3d2914;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #86e293;
+    display: inline-block;
+    padding-bottom: 0.2rem;
   }
 
-  .about-text strong {
-    color: #000;
-    font-weight: 700;
+  .qa-text p {
+    color: #3d2914;
+    line-height: 1.65;
+    margin-bottom: 0.5rem;
   }
 
-  @keyframes fade-in-up {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
+  .qa-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .qa-text em {
+    color: #f05663;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .qa-text strong {
+    color: #f05663;
+  }
+
+  @media (max-width: 520px) {
+    .qa,
+    .qa.flip {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+
+    .qa-text h3 {
+      display: block;
+    }
+    .about {
+      padding: 1.5rem 0.5rem;
+    }
+
+    .qa-text p {
+      font-size: 1rem;
     }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .about-title,
-    .about-text p {
-      animation: none !important;
+  @media (max-width: 420px) {
+    .about {
+      padding: 1.5rem 0.5rem;
     }
-  }
 
-  @media (max-width: 768px) {
-    .about-content {
-      padding: 3rem 1.5rem 2rem;
+    .qa-text h3 {
+      font-size: 1rem;
+    }
+
+    .qa-text p {
+      font-size: 0.9rem;
     }
   }
 </style>
