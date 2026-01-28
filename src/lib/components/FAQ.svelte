@@ -8,21 +8,13 @@
   <div class="faq-card">
     <FAQuestion>
       {#snippet question()}
-        <span>What is a game jam?</span>
-      {/snippet}
-      A game jam is an event where people collaborate to create games from scratch!
-      It usually runs over a weekend and is a great way to learn new skills, meet
-      new people, and have fun!
-    </FAQuestion>
-    <FAQuestion>
-      {#snippet question()}
         <span>What are the game jam tracks?</span>
       {/snippet}
       All projects submit to a main track, which aligns with the overall theme of
       the event (to be revealed on the day). Participants can optionally submit the
-      same project to one or more secondary tracks, whose themes extend the main
-      theme in some way. Participants who opt into secondary tracks are eligible
-      for both the main track and secondary track prizes.
+      same project to one or more secondary tracks, whose themes extend the main theme
+      in some way. Participants who opt into secondary tracks are eligible for both
+      the main track and secondary track prizes.
     </FAQuestion>
     <FAQuestion>
       {#snippet question()}
@@ -52,7 +44,8 @@
       {/snippet}
       If you don't have a team yet, don't hesitate to look around in our
       <a target="_blank" class="link" href="/discord">Discord server</a>. It's
-      also common to form teams at the event itself!
+      also common to form teams at the event itself! We'll have dedicated time
+      and space on the day for you to find teammates.
     </FAQuestion>
     <FAQuestion>
       {#snippet question()}

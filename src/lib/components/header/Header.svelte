@@ -80,7 +80,9 @@
 <div class="header-container" class:scrolled>
   <div class="header-grid">
     <div class="dates">
-      <div class="dates-inner">2026&nbsp;&nbsp;2/27&nbsp;&ndash;&nbsp;3/1</div>
+      <div class="dates-inner">
+        2026&nbsp;&nbsp;27/02&nbsp;&ndash;&nbsp;01/03
+      </div>
     </div>
     <a href="/" class="register-btn" class:show={scrolled}>
       <span class="register-text">THE CAMBRIDGE GAME JAM 2026</span>

@@ -14,6 +14,9 @@
           <li>
             <strong>18:30</strong> Hacking Begins
           </li>
+          <li>
+            <strong>19:00</strong> Team formation
+          </li>
         </ul>
         <h4>Saturday 28th February</h4>
         <ul>
@@ -21,7 +24,7 @@
             <strong>from 09:00</strong> Breakfast
           </li>
           <li>
-            <strong>12:00</strong> Lunch
+            <strong>13:00</strong> Lunch
           </li>
           <li>
             <strong>18:00</strong> Dinner
@@ -35,7 +38,7 @@
             <strong>from 09:00</strong> Breakfast
           </li>
           <li>
-            <strong>12:00</strong> Lunch
+            <strong>13:00</strong> Lunch
           </li>
           <li>
             <strong>16:00</strong> Hacking Ends
@@ -44,10 +47,10 @@
             <strong>16:00–18:00</strong> Judging
           </li>
           <li>
-            <strong>17:00</strong> Dinner
+            <strong>18:00</strong> Dinner
           </li>
           <li>
-            <strong>18:00</strong> Closing Ceremony
+            <strong>19:00</strong> Closing Ceremony
           </li>
         </ul>
       </div>

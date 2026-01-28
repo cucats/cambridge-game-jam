@@ -22,11 +22,12 @@
       <p>
         <strong>All current University of Cambridge students</strong> are
         welcome, and we encourage you to invite your friends from
-        <em>any discipline</em>! We expect the average team to have 2 game
-        designers, 2 artists and 1 musician - but this is very game dependent
-        and people are encouraged to do whatever they find fun. We hope to
-        create an <strong>inclusive and welcoming environment</strong>, so that
-        people from any background can enjoy the event.
+        <em>any discipline</em>! We expect the average team to include
+        programmers, artists, sound designers, and writers - but this is very
+        game dependent and people are encouraged to do whatever they find fun.
+        We hope to create an
+        <strong>inclusive and welcoming environment</strong>, so that people
+        from any background can enjoy the event.
       </p>
     </div>
   </div>
