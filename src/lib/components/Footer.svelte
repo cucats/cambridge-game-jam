@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-links">
-      <a href="mailto:info@camgamejam.com">Contact</a>
+      <a href="mailto:jl2395@cam.ac.uk">Contact</a>
       <span class="sep">•</span>
       <a href="/code-of-conduct">Code of Conduct</a>
     </div>
