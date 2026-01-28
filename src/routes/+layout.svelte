@@ -1,14 +1,21 @@
 <script>
   import "../app.css";
 
+  import { page } from "$app/stores";
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
 
   let { children } = $props();
+
+  // Force collapsed header on archive and code-of-conduct pages
+  let forceCollapsed = $derived(
+    $page.url.pathname.startsWith("/archive") ||
+      $page.url.pathname.startsWith("/code-of-conduct"),
+  );
 </script>
 
 <header class="header">
-  <Header />
+  <Header {forceCollapsed} />
 </header>
 
 <main class="flex-1">
