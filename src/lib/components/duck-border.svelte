@@ -10,6 +10,16 @@
         style="animation-delay: {(i % 12) * 0.1}s;"
       />
     {/each}
+    <!-- Duplicate ducks for seamless infinite scroll -->
+    {#each Array(24) as _, i}
+      <img
+        src="/2026/duck-standing-{(i % 3) + 1}-transparent.png"
+        alt=""
+        aria-hidden="true"
+        class="duck"
+        style="animation-delay: {(i % 12) * 0.2}s;"
+      />
+    {/each}
   </div>
 </div>
 
