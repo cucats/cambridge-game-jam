@@ -64,12 +64,14 @@
       </p>
     </div>
   </div>
+  <a href="/" class="back-link">← Back to main page</a>
 </div>
 
 <style>
   .page-container {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem 1rem;
@@ -162,6 +164,21 @@
     padding: 1rem;
     background: rgba(240, 86, 99, 0.1);
     border-left: 3px solid #f05663;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    color: #3d2914;
+    text-decoration: none;
+    font-family: "Peaberry Base", monospace;
+    font-size: 0.95rem;
+  }
+
+  .back-link:hover {
+    color: #f05663;
   }
 
   @media (max-width: 640px) {
