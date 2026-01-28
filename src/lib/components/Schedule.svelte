@@ -41,7 +41,7 @@
             <strong>13:00</strong> Lunch
           </li>
           <li>
-            <strong>16:00</strong> Hacking Ends
+            <strong>15:30</strong> Hacking Ends
           </li>
           <li>
             <strong>16:00–18:00</strong> Judging
