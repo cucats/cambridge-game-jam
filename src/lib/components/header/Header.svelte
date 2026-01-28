@@ -54,16 +54,32 @@
     if (!targetElement) return;
 
     // Header height when collapsed (scrolled state)
-    const headerHeight = 48;
+    const headerHeight = 0;
+    // Extra padding for visual breathing room - only when header is expanded
+    const extraPadding = scrolled
+      ? 0.05 * window.innerHeight
+      : 0.1 * window.innerHeight;
+
+    // Disable landing page snap scroll during navigation
+    if (browser) {
+      window.__navScrolling = true;
+    }
 
     // Simple scroll calculation - no dynamic margins to worry about
     const rect = targetElement.getBoundingClientRect();
-    const targetY = window.scrollY + rect.top - headerHeight;
+    const targetY = window.scrollY + rect.top - headerHeight - extraPadding;
 
     window.scrollTo({
       top: Math.max(0, targetY),
       behavior: "smooth",
     });
+
+    // Re-enable snap scroll after animation completes
+    setTimeout(() => {
+      if (browser) {
+        window.__navScrolling = false;
+      }
+    }, 800);
   }
 
   onMount(() => {

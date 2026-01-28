@@ -15,7 +15,7 @@
             <strong>18:30</strong> Hacking Begins
           </li>
           <li>
-            <strong>19:00</strong> Team formation
+            <strong>19:00</strong> Team finding
           </li>
         </ul>
         <h4>Saturday 28th February</h4>

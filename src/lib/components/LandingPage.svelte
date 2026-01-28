@@ -113,8 +113,12 @@
 
     scrollY = currentScrollY;
 
+    // Skip snap logic if navigation scroll is in progress
+    const isNavScrolling =
+      typeof window !== "undefined" && window.__navScrolling;
+
     // Snap logic
-    if (!isSnapping) {
+    if (!isSnapping && !isNavScrolling) {
       // Scrolling down from top - snap to about
       if (
         scrollingDown &&
