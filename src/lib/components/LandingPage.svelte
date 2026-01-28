@@ -202,9 +202,23 @@
     overflow: hidden;
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     .landing {
-      background-size: auto 100vh;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10rem;
+      padding: 2rem 6rem 4rem;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .landing {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25rem;
+      padding: 2rem 6rem 4rem;
     }
   }
 
@@ -215,6 +229,14 @@
     will-change: transform, opacity;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .header-content {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 55%;
+    }
   }
 
   .parallax-element {
@@ -261,6 +283,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    .countdown-wrap {
+      flex: 0 0 auto;
+      width: auto;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
   }
 
   .scroll-wrap {
