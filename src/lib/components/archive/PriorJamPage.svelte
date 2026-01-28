@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import BackToMainButton from "$lib/components/BackToMainButton.svelte";
 
   let currentIndex = $state(0);
   const { images, title, duration, submissions, theme } = $props();
@@ -38,7 +37,7 @@
   <title>{title}</title>
 </svelte:head>
 
-<div class="bg-linear-to-br from-rose-400 to-red-300">
+<div class="mt-12 bg-linear-to-br from-rose-400 to-red-300">
   <div class="max-w-7xl pt-6 pb-2 mx-auto max-sm:text-center">
     <img
       src="/2024/logo.png"
@@ -128,6 +127,4 @@
       ></button>
     {/each}
   </div>
-
-  <BackToMainButton />
 </div>

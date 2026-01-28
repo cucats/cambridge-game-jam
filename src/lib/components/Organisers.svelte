@@ -1,11 +1,10 @@
 <div class="organisers-section">
   <h2 class="title">Organising Committee</h2>
   <ul class="crew">
-    <li>James Leung</li>
     <li>Uliana Ronska</li>
+    <li>James Leung</li>
     <li>Jadon Mensah</li>
     <li>Kotaro Yoshizawa</li>
-    <li>Carol Bao</li>
     <li>Sophie Guenroc</li>
   </ul>
 

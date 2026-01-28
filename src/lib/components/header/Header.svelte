@@ -2,8 +2,13 @@
   import { onMount } from "svelte";
   import { browser } from "$app/environment";
 
+  let { forceCollapsed = false } = $props();
+
   let scrolled = $state(false);
   let activeSection = $state("");
+
+  // Use forceCollapsed or scroll-based state
+  let isCollapsed = $derived(forceCollapsed || scrolled);
 
   const sections = [
     { id: "about", href: "/#about", icon: "info-box", label: "About" },
@@ -93,17 +98,17 @@
   });
 </script>
 
-<div class="header-container" class:scrolled>
+<div class="header-container" class:scrolled={isCollapsed}>
   <div class="header-grid">
     <div class="dates">
       <div class="dates-inner">
         2026&nbsp;&nbsp;27/02&nbsp;&ndash;&nbsp;01/03
       </div>
     </div>
-    <a href="/" class="register-btn" class:show={scrolled}>
+    <a href="/" class="register-btn" class:show={isCollapsed}>
       <span class="register-text">THE CAMBRIDGE GAME JAM 2026</span>
     </a>
-    <nav class="nav-vertical" class:icons-only={scrolled}>
+    <nav class="nav-vertical" class:icons-only={isCollapsed}>
       {#each sections as section}
         <a
           href={section.href}
