@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import { browser } from "$app/environment";
 
-  let expanded = $state(false);
   let scrolled = $state(false);
   let activeSection = $state("");
 
@@ -23,8 +22,6 @@
     // This matches the landing page snap zone threshold
     const threshold = aboutTop * 0.15;
     scrolled = window.scrollY > threshold;
-
-    updateScrollMarginClass();
 
     // Check which section is currently in view
     const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -49,27 +46,32 @@
     }
   }
 
-  function handleClick(sectionId) {
+  function handleClick(event, sectionId) {
+    event.preventDefault();
     activeSection = sectionId;
-  }
 
-  function updateScrollMarginClass() {
-    if (!browser) return;
-    if (!scrolled) {
-      document.body.classList.add("header-expanded");
-    } else {
-      document.body.classList.remove("header-expanded");
-    }
+    const targetElement = document.getElementById(sectionId);
+    if (!targetElement) return;
+
+    // Header height when collapsed (scrolled state)
+    const headerHeight = 48;
+
+    // Simple scroll calculation - no dynamic margins to worry about
+    const rect = targetElement.getBoundingClientRect();
+    const targetY = window.scrollY + rect.top - headerHeight;
+
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: "smooth",
+    });
   }
 
   onMount(() => {
     if (browser) {
       window.addEventListener("scroll", handleScroll);
-      updateScrollMarginClass();
       handleScroll();
       return () => {
         window.removeEventListener("scroll", handleScroll);
-        document.body.classList.remove("header-expanded");
       };
     }
   });
@@ -89,7 +91,7 @@
           href={section.href}
           class="nav-link"
           class:active={activeSection === section.id}
-          onclick={() => handleClick(section.id)}
+          onclick={(e) => handleClick(e, section.id)}
         >
           <span class="nav-text">{section.label}</span>
           <img
@@ -210,9 +212,8 @@
     color: #ffffff;
   }
 
-  /* Register button in header */
   .register-btn {
-    align-items: center;
+    position: relative;
     gap: 0.4em;
     font-family: "Peaberry Base", monospace;
     font-size: clamp(0.75rem, 2vw, 0.9rem);
@@ -223,9 +224,7 @@
     letter-spacing: 0.5px;
     transition: all 0.15s ease;
     display: none;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
+    margin-right: auto;
   }
 
   .register-btn.show {
@@ -241,17 +240,9 @@
   }
 
   .register-text {
-    display: inline;
-  }
-
-  /* When header is expanded, add a large scroll offset to counter the landing shrink */
-  :global(body.header-expanded .parallax-section) {
-    scroll-margin-top: 828px;
-  }
-
-  /* When header is collapsed/scrolled, account for fixed header height */
-  :global(body:not(.header-expanded) .parallax-section) {
-    scroll-margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
   }
 
   @media (max-width: 768px) {
@@ -261,6 +252,32 @@
     }
     .nav-vertical {
       align-items: flex-end;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .header-container {
+      padding: 0 0;
+    }
+    .register-btn {
+      margin: 0 auto;
+    }
+    .nav-vertical.icons-only {
+      display: none;
+    }
+  }
+  @media (max-width: 450px) {
+    .header-container {
+      padding: 0.5rem 0.5rem;
+    }
+
+    .register-text {
+      font-size: 0.7rem;
+    }
+
+    .nav-icon {
+      width: 1em;
+      height: 1em;
     }
   }
 </style>

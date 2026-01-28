@@ -4,16 +4,13 @@
   <div class="qa">
     <!-- <img src="/2026/jam-1.jpg" alt="8-bit drawing of a jam" class="qa-img" /> -->
     <div class="qa-text">
-      <h3>What is The Cambridge Game Jam?</h3>
+      <h3>What is a Game Jam?</h3>
       <p>
-        Embark on an action-packed weekend challenge! You'll have <em
-          >48 hours</em
-        > to design and build any kind of game—from video games to board games—working
-        in teams, based around a theme announced at the start.
-      </p>
-      <p>
-        Look forward to exciting prizes awarded across a range of categories,
-        including best music, art, and more!
+        A game jam is a short event where people come together to build a game
+        in teams! In this game jam you'll have roughly <em>48 hours</em> to
+        build
+        <strong>any game you can dream of</strong>: from video games to board
+        games to ARGs.
       </p>
     </div>
   </div>
@@ -23,12 +20,13 @@
     <div class="qa-text">
       <h3>Who is invited?</h3>
       <p>
-        <strong>Everyone!</strong> Game developers, artists, musicians, and anything
-        in between. No programming experience needed.
-      </p>
-      <p>
-        A great opportunity to learn new skills, meet like-minded people, and
-        have fun making games together.
+        <strong>All current University of Cambridge students</strong> are
+        welcome, and we encourage you to invite your friends from
+        <em>any discipline</em>! We expect the average team to have 2 game
+        designers, 2 artists and 1 musician - but this is very game dependent
+        and people are encouraged to do whatever they find fun. We hope to
+        create an <strong>inclusive and welcoming environment</strong>, so that
+        people from any background can enjoy the event.
       </p>
     </div>
   </div>
@@ -37,9 +35,10 @@
 <style>
   .about {
     max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    margin-bottom: -2rem;
+    height: 100vh;
+    margin: 0 0;
+    padding: 2rem 1rem 4rem;
+    place-self: center;
   }
 
   .qa {
@@ -54,6 +53,7 @@
 
   .qa.flip {
     flex-direction: row-reverse;
+    text-align: right;
     border-left: none;
     border-right: 3px solid #f05663;
   }
@@ -87,7 +87,7 @@
     color: #f05663;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 520px) {
     .qa,
     .qa.flip {
       flex-direction: column;
@@ -98,10 +98,26 @@
     .qa-text h3 {
       display: block;
     }
+    .about {
+      padding: 1.5rem 0.5rem;
+    }
 
-    .qa-img {
-      width: 80px;
-      height: 80px;
+    .qa-text p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .about {
+      padding: 1.5rem 0.5rem;
+    }
+
+    .qa-text h3 {
+      font-size: 1rem;
+    }
+
+    .qa-text p {
+      font-size: 0.9rem;
     }
   }
 </style>

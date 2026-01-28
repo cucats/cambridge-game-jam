@@ -60,14 +60,14 @@
           alt="Cambridge University Game Dev Society"
         />
       </a>
-      <a target="_blank" href="https://uccps.soc.srcf.net/">
+      <!-- <a target="_blank" href="https://uccps.soc.srcf.net/">
         <span class="inline-block h-full align-middle"></span>
         <img
           class="inline-block align-middle h-auto w-2/5 rounded-lg"
           src="/competitive-programming-society.png"
           alt="Cambridge University Competitive Programming Society"
         />
-      </a>
+      </a> -->
     </div>
   </div>
 </div>

@@ -5,6 +5,8 @@
   let mounted = false;
   let scrollY = $state(0);
   let windowHeight = $state(0);
+  let isSnapping = false;
+  let lastScrollY = 0;
 
   // Event dates
   const registrationClose = new Date("2026-02-10T23:59:59");
@@ -20,6 +22,40 @@
   function getAboutTop() {
     const aboutSection = document.getElementById("about");
     return aboutSection ? aboutSection.offsetTop : 800;
+  }
+
+  // Snap scroll thresholds
+  const SNAP_DOWN_THRESHOLD = 20; // Scroll down past this to snap to about
+  const SNAP_UP_THRESHOLD = 50; // When in about zone, scroll up past this from about to snap back
+
+  function snapToAbout() {
+    if (isSnapping) return;
+    isSnapping = true;
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      const headerHeight = 48;
+      window.scrollTo({
+        top: aboutSection.offsetTop - headerHeight,
+        behavior: "smooth",
+      });
+      setTimeout(() => {
+        isSnapping = false;
+      }, 500);
+    } else {
+      isSnapping = false;
+    }
+  }
+
+  function snapToTop() {
+    if (isSnapping) return;
+    isSnapping = true;
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setTimeout(() => {
+      isSnapping = false;
+    }, 500);
   }
 
   // Parallax calculations - only apply within landing page zone
@@ -61,37 +97,52 @@
     const progress = Math.min(1, effectiveScroll / (aboutTop * 0.4));
     const eased = easeOutQuart(progress);
     const translateY = Math.round(effectiveScroll * 0.5);
-    const opacity = Math.max(0, 1 - eased * 1.5);
+    const opacity = Math.max(0, 1 - eased * 10);
     return {
-      transform: `translate3d(0, ${translateY}px, 0)`,
+      transform: `translate3d(-50%, ${translateY}px, 0)`,
       opacity: opacity.toFixed(2),
     };
   });
 
-  // Landing container uses negative margin-bottom to pull the next section up
-  let landingStyle = $derived.by(() => {
-    // As you scroll, the landing section gains a negative bottom margin, pulling the content below it up.
-    // This creates an overlap effect, effectively making the landing page "shrink" into the next section.
-    const maxPullUpPx = 800; // The maximum amount (in pixels) the next section will be pulled up
-    const pullUpScrollDistance = 350; // The scroll distance (in pixels) over which the pull-up effect occurs
-
-    // Calculate scroll progress, clamped between 0 and 1
-    const progress = Math.min(1, scrollY / pullUpScrollDistance);
-    // Apply easing for a smoother deceleration effect
-    const eased = easeOutQuart(progress);
-    // Calculate the negative margin-bottom
-    const marginBottom = -eased * maxPullUpPx;
-    return `margin-bottom: ${marginBottom.toFixed(1)}px;`;
-  });
-
   function onScroll() {
-    scrollY = window.scrollY;
+    const currentScrollY = window.scrollY;
+    const aboutTop = getAboutTop();
+    const headerHeight = 48;
+    const aboutScrollPosition = aboutTop - headerHeight;
+    const scrollingDown = currentScrollY > lastScrollY;
+
+    scrollY = currentScrollY;
+
+    // Snap logic
+    if (!isSnapping) {
+      // Scrolling down from top - snap to about
+      if (
+        scrollingDown &&
+        lastScrollY < SNAP_DOWN_THRESHOLD &&
+        currentScrollY >= SNAP_DOWN_THRESHOLD &&
+        currentScrollY < aboutScrollPosition - 100
+      ) {
+        snapToAbout();
+      }
+      // Scrolling up from about section - snap back to top
+      else if (
+        !scrollingDown &&
+        lastScrollY >= aboutScrollPosition - SNAP_UP_THRESHOLD &&
+        currentScrollY < aboutScrollPosition - SNAP_UP_THRESHOLD &&
+        currentScrollY > SNAP_DOWN_THRESHOLD
+      ) {
+        snapToTop();
+      }
+    }
+
+    lastScrollY = currentScrollY;
   }
 
   onMount(() => {
     mounted = true;
     windowHeight = window.innerHeight;
     scrollY = window.scrollY;
+    lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -101,7 +152,7 @@
   });
 </script>
 
-<div class="landing" style={landingStyle}>
+<div class="landing">
   <div
     class="header-content parallax-element"
     style="transform: {titleTransform.transform}; opacity: {titleTransform.opacity};"
@@ -138,10 +189,13 @@
 
 <style>
   .landing {
-    min-height: 100vh;
+    height: 100vh;
     padding: 2rem 1rem 4rem;
-    margin-top: 160px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
   }
 
   @media (max-width: 1024px) {
@@ -175,7 +229,7 @@
     letter-spacing: 3px;
     padding-right: 10px;
     line-height: 1.1;
-    font-size: clamp(3.5rem, 12vw, 8rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     transform-origin: left top;
   }
 
@@ -191,7 +245,7 @@
   .line {
     display: block;
     white-space: nowrap;
-    font-size: clamp(1.5rem, 10vw, 6.5rem);
+    font-size: clamp(2rem, 6vw, 5rem);
   }
 
   .line-year {
@@ -206,7 +260,9 @@
   }
 
   .scroll-wrap {
-    margin-top: 3rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,7 +270,6 @@
     color: #1a1c1e;
     font-size: 0.9rem;
     letter-spacing: 2px;
-    padding-top: 120px;
   }
 
   .scroll-down {

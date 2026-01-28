@@ -23,15 +23,18 @@
   :global(html),
   :global(body) {
     background-image: url("/2026/background.jpg");
-    background-size: cover;
-    background-position: 30% 0%;
-    background-repeat: no-repeat;
+    background-size: auto calc(200vh + 3rem);
+    background-position: 40% 0%;
     background-attachment: scroll;
+    background-repeat: no-repeat;
   }
-  @media (max-width: 1024px) {
+
+  @media (max-width: 768px) {
     :global(html),
     :global(body) {
-      background-size: auto 132vh;
+      background-size: auto calc(200vh + 3rem);
+      background-position: 40% 0%;
+      background-attachment: scroll;
     }
   }
 
