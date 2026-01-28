@@ -83,7 +83,8 @@
         <span>What materials are available for physical games?</span>
       {/snippet}
       For people making physical games, we will provide card, paper, dice and game
-      pieces to help you bring your craziest game ideas into reality!
+      pieces to help you bring your craziest game ideas into reality! You can also
+      request specific materials in advance via the sign-up form.
     </FAQuestion>
     <FAQuestion>
       {#snippet question()}
@@ -92,8 +93,8 @@
       You can ask us anything in our
       <a target="_blank" href="/discord" class="link">Discord server</a>! You
       can also email us at
-      <a href="mailto:info@camgamejam.com" class="link">info@camgamejam.com</a>,
-      or speak to us in person at the event, where we will be happy to answer.
+      <a href="mailto:jl2395@cam.ac.uk" class="link">jl2395@cam.ac.uk</a>, or
+      speak to us in person at the event, where we will be happy to answer.
     </FAQuestion>
   </div>
 </div>

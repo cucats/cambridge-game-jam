@@ -1,24 +1,12 @@
 <div class="sponsors">
   <h3 class="text-center sm:text-3xl">Sponsored by</h3>
   <grid class="mb-10 sm:mb-12 grid grid-cols-4 max-sm:grid-cols-2 text-center">
-    <a class="inline-block" target="_blank" href="https://www.iconicgames.io">
+    <a class="inline-block" target="_blank" href="https://www.anthropic.com/">
       <span class="inline-block h-full align-middle"></span>
       <img
         class="inline-block align-middle h-auto w-11/12"
-        src="/iconic-games-logo.png"
-        alt="Iconic Games"
-      />
-    </a>
-    <a
-      class="inline-block"
-      target="_blank"
-      href="https://www.hudsonrivertrading.com"
-    >
-      <span class="inline-block h-full align-middle"></span>
-      <img
-        class="inline-block align-middle h-auto w-11/12"
-        src="/hudson-river-trading-logo.png"
-        alt="Hudson River Trading"
+        src="/anthropic-logo.png"
+        alt="Anthropic"
       />
     </a>
     <a class="inline-block" target="_blank" href="https://janestreet.com">
@@ -33,8 +21,16 @@
       <span class="inline-block h-full align-middle"></span>
       <img
         class="inline-block align-middle h-auto w-3/5"
-        src="/qube-rt-logo.png"
+        src="/qrt-logo.svg"
         alt="Qube RT"
+      />
+    </a>
+    <a class="inline-block" target="_blank" href="https://sierra.ai/">
+      <span class="inline-block h-full align-middle"></span>
+      <img
+        class="inline-block align-middle h-auto w-3/5"
+        src="/sierra-logo.png"
+        alt="Sierra"
       />
     </a>
   </grid>
