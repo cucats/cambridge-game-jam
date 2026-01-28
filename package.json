@@ -11,7 +11,7 @@
     "check:watch": "svelte-kit sync && svelte-check --watch"
   },
   "dependencies": {
-    "@sveltejs/adapter-node": "^5.4.0",
+    "@sveltejs/adapter-node": "^5.5.2",
     "pixelarticons": "1.8.0"
   },
   "devDependencies": {
