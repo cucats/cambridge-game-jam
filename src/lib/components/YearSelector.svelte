@@ -117,7 +117,6 @@
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    background: #f5f3f0;
     padding: 0;
     overflow-x: hidden;
   }
@@ -140,14 +139,14 @@
     font-size: 0.85rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #6b6b6b;
+    color: #7a6b5a;
     margin-bottom: 0.75rem;
   }
 
   .timeline-header h3 {
     font-size: clamp(2rem, 4vw, 2.75rem);
     margin-bottom: 0.75rem;
-    color: #1a1a1a;
+    color: #3d2914;
   }
 
   .panels {
@@ -172,7 +171,7 @@
     display: flex;
     align-items: stretch;
     justify-content: stretch;
-    background: #0f172a;
+    background: #3d2914;
     box-shadow: none;
     transition:
       flex 0.5s ease,
@@ -224,9 +223,9 @@
     inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(10, 15, 30, 0.75) 0%,
-      rgba(10, 15, 30, 0.45) 45%,
-      rgba(10, 15, 30, 0.85) 100%
+      rgba(61, 41, 20, 0.7) 0%,
+      rgba(61, 41, 20, 0.35) 45%,
+      rgba(61, 41, 20, 0.8) 100%
     );
   }
 
@@ -240,12 +239,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: #ffffff;
+    color: #fffdf8;
     text-align: left;
     background: linear-gradient(
       180deg,
-      rgba(15, 23, 42, 0.15) 0%,
-      rgba(15, 23, 42, 0.75) 100%
+      rgba(61, 41, 20, 0.1) 0%,
+      rgba(61, 41, 20, 0.7) 100%
     );
     align-items: flex-start;
   }
@@ -266,11 +265,13 @@
   .panel-year {
     display: inline-flex;
     padding: 0.4rem 0.85rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    background: #86e293;
+    color: #3d2914;
     font-size: 0.9rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
+    font-weight: 600;
   }
 
   .panel-theme {
@@ -278,8 +279,9 @@
     align-items: center;
     gap: 0.65rem;
     padding: 0.45rem 0.85rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.18);
+    border-radius: 0;
+    background: rgba(255, 253, 248, 0.15);
+    border: 1px solid rgba(255, 253, 248, 0.25);
     font-size: 0.95rem;
     letter-spacing: 0.05em;
     width: max-content;
@@ -289,7 +291,7 @@
     text-transform: uppercase;
     font-size: 0.6rem;
     letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.7);
+    color: #86e293;
   }
 
   .theme-value {
@@ -307,26 +309,26 @@
     font-size: 0.95rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    color: #fffdf8;
     text-decoration: none;
     padding-bottom: 0.3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid #86e293;
     transition:
-      color 0.3s ease,
-      border-color 0.3s ease;
+      color 0.15s ease,
+      border-color 0.15s ease;
     white-space: nowrap;
     overflow: visible;
     text-overflow: unset;
   }
 
   .panel-link:hover {
-    color: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 0.6);
+    color: #86e293;
+    border-color: #86e293;
   }
 
   .panel-link.placeholder {
-    opacity: 0.6;
-    border-color: rgba(255, 255, 255, 0.25);
+    opacity: 0.5;
+    border-color: rgba(255, 253, 248, 0.3);
     cursor: default;
     pointer-events: none;
   }
@@ -339,14 +341,14 @@
   .panel.active .panel-body {
     background: linear-gradient(
       180deg,
-      rgba(15, 23, 42, 0.05) 0%,
-      rgba(15, 23, 42, 0.8) 100%
+      rgba(61, 41, 20, 0.05) 0%,
+      rgba(61, 41, 20, 0.75) 100%
     );
   }
 
   .panel.active .panel-link {
-    color: rgba(255, 255, 255, 0.95);
-    border-color: rgba(255, 255, 255, 0.65);
+    color: #fffdf8;
+    border-color: #f05663;
   }
 
   @media (max-width: 1024px) {
