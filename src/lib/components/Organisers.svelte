@@ -73,7 +73,7 @@
 
 <style>
   .organisers-section {
-    max-width: 750px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 1.5rem 1rem;
     text-align: center;
