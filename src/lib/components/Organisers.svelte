@@ -224,7 +224,7 @@
   }
 
   /* Responsive */
-  @media (max-width: 520px) {
+  @media (max-width: 540px) {
     .card-row {
       gap: 1.25rem 1.5rem;
     }
