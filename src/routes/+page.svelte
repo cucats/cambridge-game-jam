@@ -119,12 +119,12 @@
   <FAQ />
 </section>
 
-<section id="archive" class="parallax-section" style={archiveStyle}>
-  <YearSelector />
-</section>
-
 <section id="organisers" class="parallax-section" style={organisersStyle}>
   <Organisers />
+</section>
+
+<section id="archive" class="parallax-section" style={archiveStyle}>
+  <YearSelector />
 </section>
 
 <style>

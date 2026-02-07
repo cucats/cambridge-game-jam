@@ -1,39 +1,22 @@
 <div class="sponsors">
   <h3 class="text-center sm:text-3xl">Sponsored by</h3>
-  <grid class="mb-10 sm:mb-12 grid grid-cols-4 max-sm:grid-cols-2 text-center">
-    <a class="inline-block" target="_blank" href="https://www.anthropic.com/">
-      <span class="inline-block h-full align-middle"></span>
-      <img
-        class="inline-block align-middle h-auto w-11/12"
-        src="/anthropic-logo.png"
-        alt="Anthropic"
-      />
+  <div class="sponsor-row mb-10 sm:mb-12">
+    <a class="sponsor-item" target="_blank" href="https://www.anthropic.com/">
+      <img src="/anthropic-logo.png" alt="Anthropic" />
     </a>
-    <a class="inline-block" target="_blank" href="https://janestreet.com">
-      <span class="inline-block h-full align-middle"></span>
-      <img
-        class="inline-block align-middle h-auto w-11/12"
-        src="/jane-street-logo.png"
-        alt="Jane Street"
-      />
+    <a class="sponsor-item" target="_blank" href="https://janestreet.com">
+      <img src="/jane-street-logo.png" alt="Jane Street" />
     </a>
-    <a class="inline-block" target="_blank" href="https://www.qube-rt.com">
-      <span class="inline-block h-full align-middle"></span>
-      <img
-        class="inline-block align-middle h-auto w-3/5"
-        src="/qrt-logo.svg"
-        alt="Qube RT"
-      />
+    <a class="sponsor-item" target="_blank" href="https://www.qube-rt.com">
+      <img src="/qrt-logo.svg" alt="Qube RT" />
     </a>
-    <a class="inline-block" target="_blank" href="https://sierra.ai/">
-      <span class="inline-block h-full align-middle"></span>
-      <img
-        class="inline-block align-middle h-auto w-3/5"
-        src="/sierra-logo.png"
-        alt="Sierra"
-      />
+    <a class="sponsor-item" target="_blank" href="https://sierra.ai/">
+      <img src="/sierra-logo.png" alt="Sierra" />
     </a>
-  </grid>
+    <a class="sponsor-item" target="_blank" href="https://iconicgames.io/">
+      <img src="/iconic-games-logo.png" alt="Iconic Games" />
+    </a>
+  </div>
   <div class="mb-4 flex max-sm:flex-col text-center">
     <div class="mb-8 flex-1 inline-block">
       <h3 class="mb-2 sm:text-3xl">Run by</h3>
@@ -73,5 +56,36 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
+  }
+
+  .sponsor-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem 2rem;
+  }
+
+  .sponsor-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    width: 140px;
+  }
+
+  .sponsor-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 640px) {
+    .sponsor-item {
+      width: 120px;
+    }
+
+    .sponsor-row {
+      gap: 1rem 1.5rem;
+    }
   }
 </style>
