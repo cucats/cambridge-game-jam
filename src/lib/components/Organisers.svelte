@@ -163,6 +163,16 @@
     font-size: 1.05rem;
   }
 
+  /* Member names: same wrap so layout stays aligned */
+  .members .name {
+    width: 6.5em;
+    min-height: 2.4em;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Special thanks */
   .thanks {
     margin-top: 1.5rem;
