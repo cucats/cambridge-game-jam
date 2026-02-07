@@ -161,6 +161,8 @@
 
   .lead-card .name {
     font-size: 1.05rem;
+    width: 7em;
+    text-align: center;
   }
 
   /* Member names: same wrap so layout stays aligned */
@@ -225,7 +227,12 @@
   /* Responsive */
   @media (max-width: 520px) {
     .card-row {
-      gap: 1rem;
+      gap: 1.25rem 1.5rem;
+    }
+
+    .leads {
+      grid-template-columns: repeat(2, 140px);
+      gap: 1.25rem 1.5rem;
     }
 
     .members {
