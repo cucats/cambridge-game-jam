@@ -15,6 +15,7 @@
     { id: "schedule", href: "/#schedule", icon: "calendar", label: "Schedule" },
     { id: "sponsors", href: "/#sponsors", icon: "heart", label: "Sponsors" },
     { id: "faq", href: "/#faq", icon: "message-text", label: "FAQ" },
+    { id: "organisers", href: "/#organisers", icon: "users", label: "Committee" },
     { id: "archive", href: "/#archive", icon: "archive", label: "Archive" },
   ];
 

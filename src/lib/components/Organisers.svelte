@@ -1,85 +1,244 @@
+<script>
+  const leads = [
+    { name: "Uliana Ronska", photo: "/2026/organisers/uliana-ronska.jpg", url: "https://ulianaronska.com" },
+    { name: "James Leung", photo: "/2026/organisers/james-leung.jpg", url: "https://leung.dev" },
+  ];
+
+  const members = [
+    { name: "Jadon Mensah", photo: "/2026/organisers/jadon-mensah.jpg", url: null },
+    { name: "Kotaro Yoshizawa", photo: "/2026/organisers/placeholder.svg", url: null },
+    { name: "Sophie Guenroc", photo: "/2026/organisers/sophie-guenroc.jpg", url: null },
+    { name: "Alex Pylypenko", photo: "/2026/organisers/alex-pylypenko.jpg", url: null },
+  ];
+
+  const artwork = ["Ariane Dufour", "Amelie Roseblade", "Gwen Sellers"];
+</script>
+
 <div class="organisers-section">
   <h2 class="title">Organising Committee</h2>
-  <ul class="crew">
-    <li>Uliana Ronska</li>
-    <li>James Leung</li>
-    <li>Jadon Mensah</li>
-    <li>Kotaro Yoshizawa</li>
-    <li>Sophie Guenroc</li>
-    <li>Alex Pylypenko</li>
-  </ul>
 
-  <h3 class="thanks-title">Special Thanks</h3>
-  <p class="note">— artwork —</p>
-  <ul class="crew thanks">
-    <li>Ariane Dufour</li>
-    <li>Amelie Roseblade</li>
-    <li>Gwen Sellers</li>
-  </ul>
+  <!-- Lead organisers -->
+  <div class="card-row leads">
+    {#each leads as person}
+      {#if person.url}
+        <a href={person.url} target="_blank" rel="noopener noreferrer" class="card lead-card">
+          <div class="photo-frame lead-frame">
+            <img src={person.photo} alt={person.name} class="photo" />
+          </div>
+          <span class="name">{person.name}</span>
+        </a>
+      {:else}
+        <div class="card lead-card">
+          <div class="photo-frame lead-frame">
+            <img src={person.photo} alt={person.name} class="photo" />
+          </div>
+          <span class="name">{person.name}</span>
+        </div>
+      {/if}
+    {/each}
+  </div>
+
+  <!-- Other committee members -->
+  <div class="card-row members">
+    {#each members as person}
+      {#if person.url}
+        <a href={person.url} target="_blank" rel="noopener noreferrer" class="card">
+          <div class="photo-frame">
+            <img src={person.photo} alt={person.name} class="photo" />
+          </div>
+          <span class="name">{person.name}</span>
+        </a>
+      {:else}
+        <div class="card">
+          <div class="photo-frame">
+            <img src={person.photo} alt={person.name} class="photo" />
+          </div>
+          <span class="name">{person.name}</span>
+        </div>
+      {/if}
+    {/each}
+  </div>
+
+  <!-- Special thanks -->
+  <div class="thanks">
+    <h3 class="thanks-title">Special Thanks</h3>
+    <p class="note">— artwork —</p>
+    <ul class="thanks-list">
+      {#each artwork as person}
+        <li>{person}</li>
+      {/each}
+    </ul>
+  </div>
 </div>
 
 <style>
   .organisers-section {
-    max-width: 600px;
+    max-width: 750px;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem 1.5rem;
     text-align: center;
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #3d2914;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid #3d2914;
     display: inline-block;
     padding-bottom: 0.3rem;
   }
 
-  .crew {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 1.5rem;
+  /* Card grid rows */
+  .card-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.3rem 0;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
   }
 
-  .crew li {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Photo frames */
+  .photo-frame {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3d2914;
+    background: #e8e0d4;
+    box-shadow: 0 2px 8px rgba(61, 41, 20, 0.12);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover .photo-frame {
+    border-color: #7a6b5a;
+    box-shadow: 0 4px 14px rgba(61, 41, 20, 0.18);
+  }
+
+  a.card {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lead-frame {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Names */
+  .name {
     color: #3d2914;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
   }
 
-  .crew li::after {
-    content: "·";
-    margin: 0 0.6rem;
-    color: #86e293;
+  .lead-card .name {
+    font-size: 1.05rem;
   }
 
-  .crew li:last-child::after {
-    content: "";
-    margin: 0;
+  /* Special thanks */
+  .thanks {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(61, 41, 20, 0.1);
   }
 
   .thanks-title {
     font-size: 1rem;
     color: #7a6b5a;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     font-weight: 600;
-  }
-
-  .crew.thanks li {
-    color: #5a4a3a;
-  }
-
-  .crew.thanks li::after {
-    color: #f05663;
   }
 
   .note {
     font-size: 0.8rem;
     color: #a89880;
-    margin-top: 0.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.1em;
+  }
+
+  .thanks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .thanks-list li {
+    color: #5a4a3a;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  .thanks-list li::after {
+    content: "·";
+    margin: 0 0.6rem;
+    color: #f05663;
+  }
+
+  .thanks-list li:last-child::after {
+    content: "";
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 520px) {
+    .card-row {
+      gap: 1rem;
+    }
+
+    .photo-frame {
+      width: 80px;
+      height: 80px;
+    }
+
+    .lead-frame {
+      width: 100px;
+      height: 100px;
+    }
+
+    .name {
+      font-size: 0.85rem;
+    }
+
+    .lead-card .name {
+      font-size: 0.95rem;
+    }
+
+    .members {
+      gap: 1rem 0.75rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .members {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 </style>
