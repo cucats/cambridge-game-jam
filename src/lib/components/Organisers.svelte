@@ -80,7 +80,7 @@
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #3d2914;
     margin-bottom: 0.5rem;
     display: inline-block;
