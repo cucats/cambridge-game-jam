@@ -6,7 +6,7 @@
 
   const members = [
     { name: "Jadon Mensah", photo: "/2026/organisers/jadon-mensah.jpg", url: null },
-    { name: "Kotaro Yoshizawa", photo: "/2026/organisers/kotaro-yoshizawa.jpg", url: null },
+    { name: "Kotaro Yoshizawa", photo: "/2026/organisers/kotaro-yoshizawa.jpg", url: "https://github.com/Raifa21" },
     { name: "Sophie Guenroc", photo: "/2026/organisers/sophie-guenroc.jpg", url: null },
     { name: "Alex Pylypenko", photo: "/2026/organisers/alex-pylypenko.jpg", url: null },
   ];
@@ -250,6 +250,15 @@
 
     .lead-card .name {
       font-size: 0.95rem;
+    }
+
+    .card:hover {
+      transform: none;
+    }
+
+    .card:hover .photo-frame {
+      border-color: #3d2914;
+      box-shadow: 0 2px 8px rgba(61, 41, 20, 0.12);
     }
   }
 </style>
