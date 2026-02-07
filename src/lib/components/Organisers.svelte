@@ -6,7 +6,7 @@
 
   const members = [
     { name: "Jadon Mensah", photo: "/2026/organisers/jadon-mensah.jpg", url: null },
-    { name: "Kotaro Yoshizawa", photo: "/2026/organisers/placeholder.svg", url: null },
+    { name: "Kotaro Yoshizawa", photo: "/2026/organisers/kotaro-yoshizawa.jpg", url: null },
     { name: "Sophie Guenroc", photo: "/2026/organisers/sophie-guenroc.jpg", url: null },
     { name: "Alex Pylypenko", photo: "/2026/organisers/alex-pylypenko.jpg", url: null },
   ];
@@ -211,6 +211,18 @@
       gap: 1rem;
     }
 
+    .leads {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .members {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem 1rem;
+    }
+
     .photo-frame {
       width: 80px;
       height: 80px;
@@ -227,18 +239,6 @@
 
     .lead-card .name {
       font-size: 0.95rem;
-    }
-
-    .members {
-      gap: 1rem 0.75rem;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .members {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
     }
   }
 </style>
