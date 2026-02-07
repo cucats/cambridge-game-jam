@@ -83,9 +83,7 @@
     font-size: 1.6rem;
     color: #3d2914;
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid #3d2914;
     display: inline-block;
-    padding-bottom: 0.3rem;
   }
 
   /* Card grid rows */
