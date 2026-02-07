@@ -75,7 +75,7 @@
   .organisers-section {
     max-width: 750px;
     margin: 0 auto;
-    padding: 2rem 1rem 1.5rem;
+    padding: 1.5rem 1rem;
     text-align: center;
   }
 

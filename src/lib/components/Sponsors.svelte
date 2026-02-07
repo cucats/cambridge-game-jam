@@ -13,7 +13,7 @@
     <a class="sponsor-item" target="_blank" href="https://sierra.ai/">
       <img src="/sierra-logo.png" alt="Sierra" />
     </a>
-    <a class="sponsor-item" target="_blank" href="https://iconicgames.gg/">
+    <a class="sponsor-item" target="_blank" href="https://iconicgames.io/">
       <img src="/iconic-games-logo.png" alt="Iconic Games" />
     </a>
   </div>
