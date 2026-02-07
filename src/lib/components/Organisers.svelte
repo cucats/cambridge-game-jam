@@ -161,8 +161,7 @@
 
   .lead-card .name {
     font-size: 1.05rem;
-    width: 7em;
-    text-align: center;
+    white-space: nowrap;
   }
 
   /* Member names: same wrap so layout stays aligned */
