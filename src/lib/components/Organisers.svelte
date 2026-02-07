@@ -109,10 +109,13 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  a.card {
     transition: transform 0.2s ease;
   }
 
-  .card:hover {
+  a.card:hover {
     transform: translateY(-3px);
   }
 
@@ -128,7 +131,7 @@
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .card:hover .photo-frame {
+  a.card:hover .photo-frame {
     border-color: #7a6b5a;
     box-shadow: 0 4px 14px rgba(61, 41, 20, 0.18);
   }
@@ -258,11 +261,11 @@
       font-size: 0.95rem;
     }
 
-    .card:hover {
+    a.card:hover {
       transform: none;
     }
 
-    .card:hover .photo-frame {
+    a.card:hover .photo-frame {
       border-color: #3d2914;
       box-shadow: 0 2px 8px rgba(61, 41, 20, 0.12);
     }
