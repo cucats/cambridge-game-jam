@@ -88,11 +88,20 @@
 
   /* Card grid rows */
   .card-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    justify-items: center;
     gap: 1.5rem;
     margin-bottom: 1.75rem;
+  }
+
+  .leads {
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .members {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .card {
@@ -209,16 +218,10 @@
       gap: 1rem;
     }
 
-    .leads {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
     .members {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem 1rem;
+      grid-template-columns: repeat(2, 140px);
+      justify-content: center;
+      gap: 1.25rem 1.5rem;
     }
 
     .photo-frame {
