@@ -36,6 +36,7 @@
 <style>
   .about {
     max-width: 700px;
+    min-width: 320px;
     height: 100vh;
     margin: 0 0;
     padding: 2rem 1rem 4rem;
