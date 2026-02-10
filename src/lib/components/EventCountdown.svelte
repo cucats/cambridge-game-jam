@@ -19,13 +19,13 @@
       text = "REGISTRATION CLOSES IN";
     } else if (s && now < s) {
       target = s;
-      text = "STARTING IN";
+      text = "GAME JAM STARTING IN";
     } else if (e && now < e) {
       target = e;
       text = "ENDS IN";
     } else {
       target = now;
-      text = "ENDED";
+      text = "SEE YOU NEXT YEAR?";
     }
     return { target, text };
   }
@@ -85,6 +85,11 @@
   </div>
   {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
     <a href="/signup" class="register-button">REGISTER NOW!</a>
+  {:else if jamStart && Date.now() < toDate(jamStart).getTime()}
+    <a href="/signup" class="register-button">GRAB A LATE SPOT!</a>
+    <div class="late-signup-info">
+      Accepting late signups on a rolling basis
+    </div>
   {/if}
 </div>
 
@@ -153,5 +158,11 @@
       0 0 0 #3d2914,
       inset -3px -3px 0 rgba(0, 0, 0, 0.2),
       inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .late-signup-info {
+    margin-top: 12px;
+    font-size: 11px;
+    color: #625e5a;
   }
 </style>
