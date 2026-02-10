@@ -19,13 +19,13 @@
       text = "REGISTRATION CLOSES IN";
     } else if (s && now < s) {
       target = s;
-      text = "STARTING IN";
+      text = "GAME JAM STARTING IN";
     } else if (e && now < e) {
       target = e;
       text = "ENDS IN";
     } else {
       target = now;
-      text = "ENDED";
+      text = "SEE YOU NEXT YEAR?";
     }
     return { target, text };
   }
@@ -85,6 +85,8 @@
   </div>
   {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
     <a href="/signup" class="register-button">REGISTER NOW!</a>
+  {:else if jamStart && Date.now() < toDate(jamStart).getTime()}
+    <a href="/signup" class="register-button">GRAB A LATE SPOT!</a>
   {/if}
 </div>
 
