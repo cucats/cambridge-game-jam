@@ -4,9 +4,6 @@
 
   let mounted = false;
   let scrollY = $state(0);
-  let windowHeight = $state(0);
-  let isSnapping = false;
-  let lastScrollY = 0;
 
   // Event dates
   const registrationClose = new Date("2026-02-10T23:59:59");
@@ -22,40 +19,6 @@
   function getAboutTop() {
     const aboutSection = document.getElementById("about");
     return aboutSection ? aboutSection.offsetTop : 800;
-  }
-
-  // Snap scroll thresholds
-  const SNAP_DOWN_THRESHOLD = 20; // Scroll down past this to snap to about
-  const SNAP_UP_THRESHOLD = 50; // When in about zone, scroll up past this from about to snap back
-
-  function snapToAbout() {
-    if (isSnapping) return;
-    isSnapping = true;
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      const headerHeight = 48;
-      window.scrollTo({
-        top: aboutSection.offsetTop - headerHeight,
-        behavior: "smooth",
-      });
-      setTimeout(() => {
-        isSnapping = false;
-      }, 500);
-    } else {
-      isSnapping = false;
-    }
-  }
-
-  function snapToTop() {
-    if (isSnapping) return;
-    isSnapping = true;
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    setTimeout(() => {
-      isSnapping = false;
-    }, 500);
   }
 
   // Parallax calculations - only apply within landing page zone
@@ -104,49 +67,13 @@
     };
   });
 
-  function onScroll() {
-    const currentScrollY = window.scrollY;
-    const aboutTop = getAboutTop();
-    const headerHeight = 48;
-    const aboutScrollPosition = aboutTop - headerHeight;
-    const scrollingDown = currentScrollY > lastScrollY;
-
-    scrollY = currentScrollY;
-
-    // Skip snap logic if navigation scroll is in progress
-    const isNavScrolling =
-      typeof window !== "undefined" && window.__navScrolling;
-
-    // Snap logic
-    if (!isSnapping && !isNavScrolling) {
-      // Scrolling down from top - snap to about
-      if (
-        scrollingDown &&
-        lastScrollY < SNAP_DOWN_THRESHOLD &&
-        currentScrollY >= SNAP_DOWN_THRESHOLD &&
-        currentScrollY < aboutScrollPosition - 100
-      ) {
-        snapToAbout();
-      }
-      // Scrolling up from about section - snap back to top
-      else if (
-        !scrollingDown &&
-        lastScrollY >= aboutScrollPosition - SNAP_UP_THRESHOLD &&
-        currentScrollY < aboutScrollPosition - SNAP_UP_THRESHOLD &&
-        currentScrollY > SNAP_DOWN_THRESHOLD
-      ) {
-        snapToTop();
-      }
-    }
-
-    lastScrollY = currentScrollY;
-  }
-
   onMount(() => {
     mounted = true;
-    windowHeight = window.innerHeight;
     scrollY = window.scrollY;
-    lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      scrollY = window.scrollY;
+    };
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -200,6 +127,7 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    scroll-snap-align: start;
   }
 
   @media (min-width: 1024px) {
