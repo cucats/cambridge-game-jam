@@ -39,7 +39,7 @@
     min-width: 320px;
     height: 100vh;
     margin: 0 0;
-    padding: 2rem 1rem 4rem;
+    padding: 4rem 1rem 4rem;
     place-self: center;
   }
 

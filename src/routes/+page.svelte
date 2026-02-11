@@ -13,6 +13,7 @@
   let scrollY = $state(0);
   let windowHeight = $state(0);
   let ticking = false;
+  let aboutSnapLimit = 0;
 
   // Easing function - easeOutQuart (matches header & landing page)
   function easeOutQuart(t) {
@@ -68,6 +69,14 @@
     if (!ticking) {
       window.requestAnimationFrame(() => {
         scrollY = window.scrollY;
+        if (browser) {
+          const root = document.documentElement;
+          if (scrollY > aboutSnapLimit + 4) {
+            root.classList.add("no-snap");
+          } else {
+            root.classList.remove("no-snap");
+          }
+        }
         ticking = false;
       });
       ticking = true;
@@ -78,12 +87,19 @@
     if (browser) {
       windowHeight = window.innerHeight;
       scrollY = window.scrollY;
+      const headerHeight = 48;
+      const aboutEl = document.getElementById("about");
+      aboutSnapLimit = aboutEl ? aboutEl.offsetTop - headerHeight : 0;
 
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener(
         "resize",
         () => {
           windowHeight = window.innerHeight;
+          const aboutSection = document.getElementById("about");
+          aboutSnapLimit = aboutSection
+            ? aboutSection.offsetTop - headerHeight
+            : 0;
         },
         { passive: true },
       );
@@ -100,9 +116,14 @@
   <meta name="description" content="The Cambridge Game Jam 2026" />
 </svelte:head>
 
-<LandingPage />
-
-<section id="about" class="parallax-section" style={aboutStyle}>
+<div class="snap-scroll-section">
+  <LandingPage />
+</div>
+<section
+  id="about"
+  class="parallax-section snap-scroll-section"
+  style={aboutStyle}
+>
   <About />
 </section>
 
@@ -128,8 +149,17 @@
 </section>
 
 <style>
-  :global(body) {
+  :global(html) {
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+  }
+
+  :global(html.no-snap) {
+    scroll-snap-type: none;
+  }
+
+  .snap-scroll-section {
+    scroll-snap-align: start;
   }
 
   .parallax-section {
