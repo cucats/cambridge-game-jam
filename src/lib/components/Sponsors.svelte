@@ -16,6 +16,9 @@
     <a class="sponsor-item" target="_blank" href="https://iconicgames.io/">
       <img src="/iconic-games-logo.png" alt="Iconic Games" />
     </a>
+    <a class="sponsor-item" target="_blank" href="https://optiver.com/">
+      <img src="/optiver-logo.png" alt="Optiver" />
+    </a>
   </div>
   <div class="mb-4 flex max-sm:flex-col text-center">
     <div class="mb-8 flex-1 inline-block">
@@ -53,7 +56,7 @@
 
 <style>
   .sponsors {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 2rem 1rem;
   }
