@@ -13,7 +13,7 @@
             <a
               href="https://noshecambridge.co.uk/"
               target="_blank"
-              class="place">by Noshe Cambridge</a
+              class="place">Noshe Cambridge</a
             >
           </li>
           <li>
@@ -31,7 +31,7 @@
           <li>
             <strong>13:00</strong> Lunch
             <a href="https://nannamexico.com/" target="_blank" class="place"
-              >by Nanna Mexico</a
+              >Nanna Mexico</a
             >
           </li>
           <li>
@@ -39,7 +39,7 @@
             <a
               href="https://africfoodrestaurant.co.uk/"
               target="_blank"
-              class="place">by Africfood</a
+              class="place">Africfood</a
             >
           </li>
         </ul>
@@ -53,7 +53,7 @@
           <li>
             <strong>13:00</strong> Lunch
             <a href="https://kanzaman.co.uk/" target="_blank" class="place"
-              >by Kanzaman</a
+              >Kanzaman</a
             >
           </li>
           <li>
@@ -65,7 +65,7 @@
           <li>
             <strong>18:00</strong> Dinner
             <a href="https://www.aromi.co.uk/" target="_blank" class="place"
-              >by Aromi</a
+              >Aromi</a
             >
           </li>
           <li>
