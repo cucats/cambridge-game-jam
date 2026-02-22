@@ -10,11 +10,6 @@
           </li>
           <li>
             <strong>18:30</strong> Dinner
-            <a
-              href="https://noshecambridge.co.uk/"
-              target="_blank"
-              class="place">by Noshe Cambridge</a
-            >
           </li>
           <li>
             <strong>18:30</strong> Hacking Begins
@@ -30,17 +25,9 @@
           </li>
           <li>
             <strong>13:00</strong> Lunch
-            <a href="https://nannamexico.com/" target="_blank" class="place"
-              >by Nanna Mexico</a
-            >
           </li>
           <li>
             <strong>18:00</strong> Dinner
-            <a
-              href="https://africfoodrestaurant.co.uk/"
-              target="_blank"
-              class="place">by Africfood</a
-            >
           </li>
         </ul>
       </div>
@@ -52,9 +39,6 @@
           </li>
           <li>
             <strong>13:00</strong> Lunch
-            <a href="https://kanzaman.co.uk/" target="_blank" class="place"
-              >by Kanzaman</a
-            >
           </li>
           <li>
             <strong>15:30</strong> Hacking Ends
@@ -64,9 +48,6 @@
           </li>
           <li>
             <strong>18:00</strong> Dinner
-            <a href="https://www.aromi.co.uk/" target="_blank" class="place"
-              >by Aromi</a
-            >
           </li>
           <li>
             <strong>19:00</strong> Closing Ceremony
@@ -85,10 +66,5 @@
   }
   strong::after {
     content: " •";
-  }
-
-  .place {
-    font-size: 0.9rem;
-    color: #555;
   }
 </style>
