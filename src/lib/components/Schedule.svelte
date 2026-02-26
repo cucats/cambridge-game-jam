@@ -9,15 +9,15 @@
             <strong>18:00–18:30</strong> Opening Ceremony
           </li>
           <li>
-            <strong>18:30</strong> Dinner
+            <strong>18:30</strong> Hacking Begins
+          </li>
+          <li>
+            <strong>19:00</strong> Dinner
             <a
               href="https://noshecambridge.co.uk/"
               target="_blank"
               class="place">Noshe Cambridge</a
             >
-          </li>
-          <li>
-            <strong>18:30</strong> Hacking Begins
           </li>
           <li>
             <strong>19:00</strong> Team finding
@@ -33,6 +33,9 @@
             <a href="https://nannamexico.com/" target="_blank" class="place"
               >Nanna Mexico</a
             >
+          </li>
+          <li>
+            <strong>15:30</strong> Social Mixer (Cafe area)
           </li>
           <li>
             <strong>18:00</strong> Dinner
