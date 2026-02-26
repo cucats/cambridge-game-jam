@@ -19,6 +19,13 @@
     <a class="sponsor-item" target="_blank" href="https://optiver.com/">
       <img src="/optiver-logo.png" alt="Optiver" />
     </a>
+    <a
+      class="sponsor-item pt-2"
+      target="_blank"
+      href="https://www.citadel.com/"
+    >
+      <img src="/citadel-logo.png" alt="Citadel" />
+    </a>
   </div>
   <div class="mb-4 flex max-sm:flex-col text-center">
     <div class="mb-8 flex-1 inline-block">
