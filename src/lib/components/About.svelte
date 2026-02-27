@@ -38,7 +38,7 @@
     max-width: 700px;
     min-width: 320px;
     height: 100vh;
-    margin: 0 0;
+    margin-top: 4rem;
     padding: 4rem 1rem 4rem;
     place-self: center;
   }
