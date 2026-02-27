@@ -35,7 +35,7 @@
             >
           </li>
           <li>
-            <strong>15:30</strong> Social Mixer (Cafe area)
+            <strong>16:30 - 17:30</strong> Social Mixer
           </li>
           <li>
             <strong>18:00</strong> Dinner
