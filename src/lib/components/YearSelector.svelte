@@ -19,13 +19,14 @@
       theme: "Synaesthesia",
       submissionImage: "/2025/Synthesia.png",
       accent: "#3C6E71",
+      archiveLink: "https://itch.io/jam/camgamejam2025/results",
     },
     {
       year: 2026,
       theme: "Set in Stone",
       submissionImage: "/2026/a-sinking-feeling.jpg",
       accent: "#8C5A8E",
-      archiveLink: null,
+      archiveLink: "https://camgamejam2026.devpost.com/project-gallery",
     },
   ];
 
@@ -90,7 +91,7 @@
             </div>
 
             {#if yearData.archiveLink}
-              <a class="panel-link" href={yearData.archiveLink}>
+              <a class="panel-link" target="_blank" href={yearData.archiveLink}>
                 Open archive →
               </a>
             {:else}
