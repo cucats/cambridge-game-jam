@@ -1,5 +1,5 @@
 <script>
-  let { registrationClose, jamStart, jamEnd } = $props();
+  let { registrationClose, jamStart, jamEnd, judgeEnd } = $props();
 
   const toDate = (v) => (v instanceof Date ? v : new Date(v));
 
@@ -10,7 +10,7 @@
     const r = registrationClose ? toDate(registrationClose).getTime() : null;
     const s = jamStart ? toDate(jamStart).getTime() : null;
     const e = jamEnd ? toDate(jamEnd).getTime() : null;
-
+    const j = judgeEnd ? toDate(judgeEnd).getTime() : null;
     let target = now;
     let text = "";
 
@@ -23,9 +23,12 @@
     } else if (e && now < e) {
       target = e;
       text = "ENDS IN";
+    } else if (j && now < j) {
+      target = j;
+      text = "JUDGING!";
     } else {
       target = now;
-      text = "SEE YOU NEXT YEAR?";
+      text = "SEE YOU NEXT YEAR!";
     }
     return { target, text };
   }
@@ -54,6 +57,7 @@
   {#if label}
     <div class="label">{label}</div>
   {/if}
+  <!-- {#if jamEnd && Date.now() < toDate(jamEnd).getTime()} -->
   <div class="timer" aria-live="polite">
     <div class="unit">
       <div class="value">{pad2(Math.floor(dt / 86400))}</div>
@@ -83,6 +87,7 @@
       </div>
     </div>
   </div>
+  <!-- {/if} -->
   {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
     <a href="/signup" class="register-button">REGISTER NOW!</a>
   {:else if jamStart && Date.now() < toDate(jamStart).getTime()}
