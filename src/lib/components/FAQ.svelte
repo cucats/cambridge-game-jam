@@ -11,10 +11,7 @@
         <span>What are the game jam tracks?</span>
       {/snippet}
       All projects submit to a main track, which aligns with the overall theme of
-      the event (to be revealed on the day). Participants can optionally submit the
-      same project to one or more secondary tracks, whose themes extend the main theme
-      in some way. Participants who opt into secondary tracks are eligible for both
-      the main track and secondary track prizes.
+      the event (to be revealed on the day).
     </FAQuestion>
     <FAQuestion>
       {#snippet question()}
