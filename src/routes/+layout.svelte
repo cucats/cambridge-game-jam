@@ -15,7 +15,10 @@
 </script>
 
 <svelte:head>
-  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  <meta
+    http-equiv="cache-control"
+    content="no-cache, no-store, must-revalidate"
+  />
   <meta http-equiv="pragma" content="no-cache" />
   <meta http-equiv="expires" content="0" />
 </svelte:head>
@@ -39,7 +42,7 @@
   :global(html),
   :global(body) {
     background-image: url("/2026/background.jpg");
-    background-size: auto calc(200vh + 3rem);
+    background-size: auto calc(210vh + 3rem);
     background-position: 40% 0%;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -48,7 +51,7 @@
   @media (max-width: 768px) {
     :global(html),
     :global(body) {
-      background-size: auto calc(200vh + 3rem);
+      background-size: auto calc(210vh + 3rem);
       background-position: 40% 0%;
       background-attachment: scroll;
     }

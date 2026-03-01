@@ -19,13 +19,14 @@
       theme: "Synaesthesia",
       submissionImage: "/2025/Synthesia.png",
       accent: "#3C6E71",
+      archiveLink: "https://itch.io/jam/camgamejam2025/results",
     },
     {
       year: 2026,
-      theme: "???",
-      submissionImage: null,
+      theme: "Set in Stone",
+      submissionImage: "/2026/a-sinking-feeling.jpg",
       accent: "#8C5A8E",
-      archiveLink: null,
+      archiveLink: "https://camgamejam2026.devpost.com/project-gallery",
     },
   ];
 
@@ -50,12 +51,10 @@
         <div
           class="panel"
           class:active={selectedYear === yearData.year}
-          class:disabled={yearData.year === 2026}
           style="--accent: {yearData.accent}"
           role="none"
-          on:click={() => yearData.year !== 2026 && setYear(yearData.year)}
-          on:pointerenter={() =>
-            yearData.year !== 2026 && setYear(yearData.year)}
+          on:click={() => setYear(yearData.year)}
+          on:pointerenter={() => setYear(yearData.year)}
         >
           <button
             type="button"
@@ -64,9 +63,8 @@
             role="tab"
             aria-selected={selectedYear === yearData.year}
             aria-controls={`panel-${yearData.year}`}
-            aria-disabled={yearData.year === 2026}
-            tabindex={yearData.year === 2026 ? -1 : 0}
-            on:focus={() => yearData.year !== 2026 && setYear(yearData.year)}
+            tabindex={yearData.year === 0}
+            on:focus={() => setYear(yearData.year)}
           >
             <span class="sr-only">Select {yearData.year}</span>
           </button>
@@ -93,15 +91,13 @@
             </div>
 
             {#if yearData.archiveLink}
-              <a class="panel-link" href={yearData.archiveLink}>
+              <a class="panel-link" target="_blank" href={yearData.archiveLink}>
                 Open archive →
               </a>
             {:else}
-              <span class="panel-link placeholder" aria-hidden="true"
-                >{yearData.year === 2025
-                  ? "Archive coming soon…"
-                  : "\u00A0"}</span
-              >
+              <span class="panel-link placeholder" aria-hidden="true">
+                Archive coming soon...
+              </span>
             {/if}
           </div>
         </div>

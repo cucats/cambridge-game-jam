@@ -57,37 +57,44 @@
   {#if label}
     <div class="label">{label}</div>
   {/if}
-  <!-- {#if jamEnd && Date.now() < toDate(jamEnd).getTime()} -->
-  <div class="timer" aria-live="polite">
-    <div class="unit">
-      <div class="value">{pad2(Math.floor(dt / 86400))}</div>
-      <div class="name">
-        {Math.floor(dt / 86400) === 1 ? "DAY" : "DAYS"}
+  {#if jamEnd && Date.now() < toDate(jamEnd).getTime()}
+    <div class="timer" aria-live="polite">
+      <div class="unit">
+        <div class="value">{pad2(Math.floor(dt / 86400))}</div>
+        <div class="name">
+          {Math.floor(dt / 86400) === 1 ? "DAY" : "DAYS"}
+        </div>
+      </div>
+      <div class="sep">:</div>
+      <div class="unit">
+        <div class="value">{pad2(Math.floor((dt / 3600) % 24))}</div>
+        <div class="name">
+          {Math.floor((dt / 3600) % 24) === 1 ? "HOUR" : "HOURS"}
+        </div>
+      </div>
+      <div class="sep">:</div>
+      <div class="unit">
+        <div class="value">{pad2(Math.floor((dt / 60) % 60))}</div>
+        <div class="name">
+          {Math.floor((dt / 60) % 60) === 1 ? "MINUTE" : "MINUTES"}
+        </div>
+      </div>
+      <div class="sep">:</div>
+      <div class="unit">
+        <div class="value">{pad2(Math.floor(dt % 60))}</div>
+        <div class="name">
+          {Math.floor(dt % 60) === 1 ? "SECOND" : "SECONDS"}
+        </div>
       </div>
     </div>
-    <div class="sep">:</div>
-    <div class="unit">
-      <div class="value">{pad2(Math.floor((dt / 3600) % 24))}</div>
-      <div class="name">
-        {Math.floor((dt / 3600) % 24) === 1 ? "HOUR" : "HOURS"}
-      </div>
-    </div>
-    <div class="sep">:</div>
-    <div class="unit">
-      <div class="value">{pad2(Math.floor((dt / 60) % 60))}</div>
-      <div class="name">
-        {Math.floor((dt / 60) % 60) === 1 ? "MINUTE" : "MINUTES"}
-      </div>
-    </div>
-    <div class="sep">:</div>
-    <div class="unit">
-      <div class="value">{pad2(Math.floor(dt % 60))}</div>
-      <div class="name">
-        {Math.floor(dt % 60) === 1 ? "SECOND" : "SECONDS"}
-      </div>
-    </div>
-  </div>
-  <!-- {/if} -->
+  {:else}
+    <a
+      href="https://forms.gle/62pKM8688P5xjbC49"
+      target="_blank"
+      class="mailing-list-button"
+      >Interested in joining next year? Fill in this interest form!</a
+    >
+  {/if}
   {#if registrationClose && Date.now() < toDate(registrationClose).getTime()}
     <a href="/signup" class="register-button">REGISTER NOW!</a>
   {:else if jamStart && Date.now() < toDate(jamStart).getTime()}
@@ -151,6 +158,21 @@
     letter-spacing: 1px;
     transition: all 0.1s ease;
     image-rendering: pixelated;
+  }
+
+  .mailing-list-button {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: #1a1c1e;
+    border: #1a1c1e 4px solid;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
   }
 
   .register-button:hover {
