@@ -8,7 +8,8 @@
   // Event dates
   const registrationClose = new Date("2026-02-10T23:59:59");
   const jamStart = new Date("2026-02-27T18:00:00");
-  const jamEnd = new Date("2026-03-01T16:00:00");
+  const jamEnd = new Date("2026-03-01T15:30:00");
+  const judgeEnd = new Date("2026-03-01T19:00:00");
 
   // Easing function - easeOutQuart for smooth deceleration (matches header feel)
   function easeOutQuart(t) {
@@ -100,7 +101,7 @@
     class="countdown-wrap parallax-element"
     style="transform: {countdownTransform.transform}; opacity: {countdownTransform.opacity};"
   >
-    <EventCountdown {registrationClose} {jamStart} {jamEnd} />
+    <EventCountdown {registrationClose} {jamStart} {jamEnd} {judgeEnd} />
   </div>
 
   <div
